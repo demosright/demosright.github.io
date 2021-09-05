@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rogo-Sara - 通信</title><link href="https://demosright.github.io/" rel="alternate"></link><link href="https://demosright.github.io/feeds/tong-xin.atom.xml" rel="self"></link><id>https://demosright.github.io/</id><updated>2021-09-05T17:08:54+00:00</updated><entry><title>3GPP标准组织</title><link href="https://demosright.github.io/3gppbiao-zhun-zu-zhi.html" rel="alternate"></link><published>2021-09-05T17:08:54+00:00</published><updated>2021-09-05T17:08:54+00:00</updated><author><name>aTry</name></author><id>tag:demosright.github.io,2021-09-05:/3gppbiao-zhun-zu-zhi.html</id><summary type="html">&lt;h1 id="about-3gpp-home"&gt;About 3GPP Home&lt;/h1&gt;
+&lt;p&gt;The 3rd Generation Partnership Project (3GPP) unites [Seven] telecommunications standard development organizations (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC), known as “Organizational Partners” and provides their members with a stable environment to produce the Reports and Specifications that define 3GPP technologies.&lt;/p&gt;
+&lt;p&gt;The project covers cellular telecommunications technologies …&lt;/p&gt;</summary><content type="html">&lt;h1 id="about-3gpp-home"&gt;About 3GPP Home&lt;/h1&gt;
+&lt;p&gt;The 3rd Generation Partnership Project (3GPP) unites [Seven] telecommunications standard development organizations (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC), known as “Organizational Partners” and provides their members with a stable environment to produce the Reports and Specifications that define 3GPP technologies.&lt;/p&gt;
+&lt;p&gt;The project covers cellular telecommunications technologies, including radio access, core network and service capabilities, which provide a complete system description for mobile telecommunications.&lt;/p&gt;
+&lt;p&gt;The 3GPP specifications also provide hooks for non-radio access to the core network,and for interworking with non-3GPP networks.&lt;/p&gt;
+&lt;p&gt;3GPP specifications and studies are contribution-driven, by member companies, in Working Groups and at the Technical Specification Group level.&lt;/p&gt;
+&lt;p&gt;The three Technical Specification Groups (TSG) in 3GPP are;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;Radio Access Networks (RAN),
+Services &amp;amp; Systems Aspects (SA),
+Core Network &amp;amp; Terminals (CT)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="mermaid"&gt;
+graph TD
+id1(Project Co-ordination Group -- PCG)
+id1 --&gt; id2(TSG RAN)
+id1 --&gt; id3(TSG CT)
+id1 --&gt; id4(TSG SA)
+id2 --&gt; id21(RAN WG1 - L1 PHY)
+id21 --&gt; id22(RAN WG2 - L2+L3 RRC)
+id22 --&gt; id23(RAN WG3 - RAN interface)
+id23 --&gt; id24(RAN WG4 Performance&amp;Protocol)
+id24 --&gt; id25(RAN WG5 Mobile Terminal Conformance Testing)
+id3 --&gt; id31(CT WG1 - UE&amp;Core Network protocols)
+id31 --&gt; id32(CT WG3 - ...Charging Control)
+id32 --&gt; id33(CT WG4 - Core Network Protocols)
+id33 --&gt; id34(CT WG6 - SmartCard&amp;AppAspects)
+id4 --&gt; id41(SA WG1 - Services)
+id41 --&gt; id42(SA WG2 - SystemArchitecture&amp;Services)
+id42 --&gt; id43(SA WG3 - Security&amp;Privacy)
+id43 --&gt; id44(SA WG4 - MultimediaCodecs)
+id44 --&gt; id45(SA WG3 - Management..)
+id45 --&gt; id46(SA WG4 - AppEnbale&amp;CriticalCommunicationApp)
+&lt;/div&gt;
+
+&lt;div class="mermaid"&gt;
+info
+&lt;/div&gt;
+
+&lt;script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"&gt;&lt;/script&gt;</content><category term="通信"></category></entry></feed>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rogo-Sara - 编程</title><link href="https://demosright.github.io/" rel="alternate"></link><link href="https://demosright.github.io/feeds/bian-cheng.atom.xml" rel="self"></link><id>https://demosright.github.io/</id><updated>2021-09-05T17:13:04+00:00</updated><entry><title>BlogTest</title><link href="https://demosright.github.io/blogtest.html" rel="alternate"></link><published>2021-09-05T17:13:04+00:00</published><updated>2021-09-05T17:13:04+00:00</updated><author><name>aTry</name></author><id>tag:demosright.github.io,2021-09-05:/blogtest.html</id><content type="html">&lt;p&gt;这是我的第一篇文章&lt;/p&gt;
+&lt;p&gt;该不会不能换行吧&lt;/p&gt;
+&lt;p&gt;在Python pelican中插入mermaid的方法&lt;br&gt;
+https://blog.csdn.net/s651665496/article/details/114263422&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ok&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="mermaid"&gt;
+graph TD
+id1(This is the text in the box)
+id1 --&gt; A
+id1 --&gt; B
+&lt;/div&gt;
+
+&lt;div class="mermaid"&gt;
+info
+&lt;/div&gt;
+
+&lt;script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"&gt;&lt;/script&gt;</content><category term="编程"></category></entry><entry><title>python命令行当计算器</title><link href="https://demosright.github.io/pythonming-ling-xing-dang-ji-suan-qi.html" rel="alternate"></link><published>2021-09-05T17:10:03+00:00</published><updated>2021-09-05T17:10:03+00:00</updated><author><name>aTry</name></author><id>tag:demosright.github.io,2021-09-05:/pythonming-ling-xing-dang-ji-suan-qi.html</id><content type="html">&lt;p&gt;在终端命令行中直接把python当做计算器&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;python -c print(2*3)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="编程"></category></entry></feed>
