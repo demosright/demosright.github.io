@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog - aTry</title><link href="/" rel="alternate"></link><link href="/feeds/atry.atom.xml" rel="self"></link><id>/</id><updated>2021-08-01T11:18:49+00:00</updated><entry><title>aTry的技术博客</title><link href="/my-super-post.html" rel="alternate"></link><published>2021-08-01T11:18:43+00:00</published><updated>2021-08-01T11:18:49+00:00</updated><author><name>aTry</name></author><id>tag:None,2021-08-01:/my-super-post.html</id><content type="html">&lt;p&gt;这是我的第一篇文章&lt;/p&gt;
+&lt;p&gt;该不会不能换行吧&lt;/p&gt;
+&lt;p&gt;在Python pelican中插入mermaid的方法
+https://blog.csdn.net/s651665496/article/details/114263422&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ok&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="nf"&gt;graph&lt;/span&gt; &lt;span class="n"&gt;TD&lt;/span&gt;
+    &lt;span class="n"&gt;id1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="kr"&gt;in&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;box&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;id1&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;A&lt;/span&gt;
+    &lt;span class="n"&gt;id1&lt;/span&gt; &lt;span class="o"&gt;--&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;B&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;info
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content><category term="技术"></category><category term="pelican"></category><category term="publishing"></category></entry></feed>
