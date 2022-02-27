@@ -21,7 +21,180 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://demosright.github.io/meng-te-qia-luo-fang-zhen.html">蒙特卡洛仿真</a></h1>
+                    <h1 class="entry-title"><a href="https://demosright.github.io/pythonzhong-de-__name__.html">python中的__name__</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2022-02-27T20:42:27.765247+00:00">
+                Published: 周日 27 二月 2022
+        </abbr>
+		<br />
+        <abbr class="modified" title="2022-02-27T20:42:27.765247+00:00">
+                Updated: 周日 27 二月 2022
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://demosright.github.io/author/atry.html">aTry</a>
+        </address>
+<p>In <a href="https://demosright.github.io/category/codingtips.html">CodingTips</a>.</p>
+
+</footer><!-- /.post-info --><p><code>__name__</code> 是python中的内置属性，每一个python文件都有一个 <code>__name__</code> 属性。对于同一文件，这一属性在不同使用情况下有不同的值</p>
+<h2 id="_1">在顶级代码环境中</h2>
+<p>“顶级代码”是第一个开始运行的用户指定的 Python 模块/文件。它是“顶级的”，因为它导入了程序需要的所有其他模块。有时“顶级代码”被称为应用程序的入口点。<br>
+顶级模块 <code>__name__</code> 都设置为 <code>&lsquo;__main__&lsquo;</code> .<br>
+因此，模块可以通过检查自己的 来发现它是否在顶级环境中运行<code>__name__</code> ，这允许在模块未从导入语句初始化时有条件地执行代码的通用习惯用法：</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="c1"># 当模块没有被任何import语句初始化而执行时</span>
+    <span class="c1"># Execute when the module is not initialized from an import statement.</span>
+    <span class="o">...</span>
+</code></pre></div>
+
+<h2 id="_2">作为模块被引用时</h2>
+<p>py文件作为模块被引用时，其 <code>__name__</code> 的值表现为python文件名本身(不含&rsquo;.py&rsquo;), 例如:</p>
+<div class="highlight"><pre><span></span><code>myclass
+  ├── teacher.py
+  └── myclass_test.py
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># myclass/myclass_test.py</span>
+<span class="kn">import</span> <span class="nn">teacher</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">teacher</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="c1"># tearcher</span>
+</code></pre></div>
+
+<h2 id="__name__">包中的__name__</h2>
+<h3 id="__init__py">在__init__.py中</h3>
+<p>当该包被其他文件引用时, __init__.py文件中的 <code>__name__</code> 变量的值为包名, 例如:</p>
+<div class="highlight"><pre><span></span><code>myclass
+  ├── teacher.py
+  └── __init__.py
+test.py
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># myclass/__init__.py</span>
+<span class="k">def</span> <span class="nf">showname</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;myclass包中__init__.py中的__name__:&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># test.py</span>
+<span class="kn">import</span> <span class="nn">myclass</span>
+<span class="n">myclass</span><span class="o">.</span><span class="n">showname</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myclass</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test finished.&#39;</span><span class="p">)</span>
+<span class="c1"># myclass包中__init__.py中的__name__: myclass</span>
+<span class="c1"># myclass</span>
+<span class="c1"># test finished.</span>
+</code></pre></div>
+
+<h3 id="__main__py">在__main__.py中</h3>
+<p>当该包被其他文件引用时, __init__.py文件中的 <code>__name__</code> 变量的值为 <code>__main__</code> , 例如:</p>
+<div class="highlight"><pre><span></span><code>myclass
+  ├── teacher.py
+  ├── __main__.py
+  └── __init__.py
+test.py
+</code></pre></div>
+
+<p>外部python文件如需直接调用包中的__main__.py，必须在__int__.py中加入 <code>from .__main__ import *</code> ，注意如果不添加将无法直接引用包中的__main__属性, 需通过 <code>python -m myclass</code> 来执行</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># myclass/__init__.py</span>
+<span class="kn">from</span> <span class="nn">.__main__</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">showname</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;myclass包中__init__.py中的__name__:&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># myclass/__main__.py</span>
+<span class="k">def</span> <span class="nf">showname</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;myclass包中__main__.py中的__name__:&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># test.py</span>
+<span class="kn">import</span> <span class="nn">myclass</span>
+
+<span class="c1"># __init__.py测试</span>
+<span class="n">myclass</span><span class="o">.</span><span class="n">showname</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myclass</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># __main__.py测试</span>
+<span class="n">myclass</span><span class="o">.</span><span class="n">__main__</span><span class="o">.</span><span class="n">showmainname</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myclass</span><span class="o">.</span><span class="n">__main__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test finished.&#39;</span><span class="p">)</span>
+<span class="c1"># myclass包中__init__.py中的__name__: myclass</span>
+<span class="c1"># myclass</span>
+<span class="c1"># myclass包中__main__.py中的__name__: myclass.__main__</span>
+<span class="c1"># myclass.__main__</span>
+<span class="c1"># test finished.</span>
+</code></pre></div>
+
+<p>去掉 <code>from .__main__ import *</code> ,使用-m标志将直接从命令行调用包本身执行__main__.py</p>
+<div class="highlight"><pre><span></span><code>python3 -m myclass
+myclass包中__main__.py中的__name__:__main__
+</code></pre></div>
+
+<p>注意如果不去掉__init__.py文件中的 <code>from .__main__ import *</code> ，将会出现警告</p>
+<div class="highlight"><pre><span></span><code><span class="ne">RuntimeWarning</span><span class="p">:</span> <span class="s1">&#39;myclass.__main__&#39;</span> <span class="n">found</span> <span class="ow">in</span> 
+<span class="n">sys</span><span class="o">.</span><span class="n">modules</span> <span class="n">after</span> <span class="kn">import</span> <span class="nn">of</span> <span class="n">package</span> <span class="s1">&#39;myclass&#39;</span><span class="p">,</span> <span class="n">but</span> <span class="n">prior</span> <span class="n">to</span> <span class="n">execution</span> <span class="n">of</span> <span class="s1">&#39;myclass.__main__&#39;</span><span class="p">;</span> <span class="n">this</span> <span class="n">may</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">unpredictable</span> <span class="n">behaviour</span>
+  <span class="n">warn</span><span class="p">(</span><span class="ne">RuntimeWarning</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
+<span class="n">myclass包中__main__</span><span class="o">.</span><span class="n">py中的__name__</span><span class="p">:</span> <span class="n">__main__</span>
+</code></pre></div>
+
+<h3 id="py">在包中的其他py文件中</h3>
+<p>此时 <code>__name__</code> 变量的值为<b>包名.文件名</b>(不包含&rsquo;.py&rsquo;),<br>
+在__name__.py文件中引入teacher模块</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># myclass/__init__.py</span>
+<span class="kn">from</span> <span class="nn">.__main__</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">teacher</span>
+
+<span class="k">def</span> <span class="nf">showname</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;myclass包中__init__.py中的__name__:&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="c1"># myclass/teacher.py</span>
+
+<span class="k">def</span> <span class="nf">showteachername</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;myclass包中teacher.py中的__name__:&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
+</code></pre></div>
+
+<p>对在上一小节的test.py稍作修改</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># test.py</span>
+<span class="kn">import</span> <span class="nn">myclass</span>
+
+<span class="c1"># __init__.py测试</span>
+<span class="n">myclass</span><span class="o">.</span><span class="n">showname</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myclass</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># __main__.py测试</span>
+<span class="n">myclass</span><span class="o">.</span><span class="n">__main__</span><span class="o">.</span><span class="n">showmainname</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myclass</span><span class="o">.</span><span class="n">__main__</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># teacher.py测试</span>
+<span class="n">myclass</span><span class="o">.</span><span class="n">teacher</span><span class="o">.</span><span class="n">showteachername</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myclass</span><span class="o">.</span><span class="n">teacher</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;test finished.&#39;</span><span class="p">)</span>
+<span class="c1"># myclass包中__main__.py中的__name__: myclass.__main__</span>
+<span class="c1"># myclass包中__init__.py中的__name__: myclass</span>
+<span class="c1"># myclass</span>
+<span class="c1"># myclass包中__main__.py中的__name__: myclass.__main__</span>
+<span class="c1"># myclass.__main__</span>
+<span class="c1"># myclass包中teacher.py中的__name__: myclass.teacher</span>
+<span class="c1"># myclass.teacher</span>
+<span class="c1"># test finished.</span>
+</code></pre></div>
+
+<p>注意结果中出现了2次 <code>myclass包中__main__.py中的__name__: myclass.<strong>main</strong></code> ，是因为在导入myclass包时，执行了<code>from .<strong>main</strong> import *</code></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://demosright.github.io/meng-te-qia-luo-fang-zhen.html" rel="bookmark"
+                           title="Permalink to 蒙特卡洛仿真">蒙特卡洛仿真</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2022-02-02T11:03:57.833659+00:00">
                 Published: 周三 02 二月 2022
@@ -36,14 +209,12 @@
         </address>
 <p>In <a href="https://demosright.github.io/category/speak-with-science.html">Speak With Science</a>.</p>
 
-</footer><!-- /.post-info --><h1 id="monte-carlo-simulation">蒙特卡洛模拟(Monte Carlo Simulation)</h1>
+</footer><!-- /.post-info -->                <h1 id="monte-carlo-simulation">蒙特卡洛模拟(Monte Carlo Simulation)</h1>
 <p>又称蒙特卡洛方法，蒙特卡洛仿真，其基本思想是将所要求解问题的答案，等效为为某种事件出现的概率或者某个随机变量的期望值，它们可以通过某种实验的方法，得到这种事件的概率或者随机变量的期望，这就是蒙特卡洛方法的基本思想。</p>
-<p><a href=".\selfdefine\MonteCarloSim\index.html">蒙特卡洛仿真方法计算圆周率π</a></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p><a href=".\selfdefine\MonteCarloSim\index.html">蒙特卡洛仿真方法计算圆周率π</a></p>
+                <a class="readmore" href="https://demosright.github.io/meng-te-qia-luo-fang-zhen.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
