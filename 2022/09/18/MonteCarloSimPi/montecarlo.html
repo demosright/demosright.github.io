@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" name="keywords" content="蒙特卡洛,蒙特卡洛仿真,蒙特卡洛模拟,蒙特卡洛算法,蒙特卡洛方法,圆周率,pi,π,Monte Carlo,Monte Carlo Simulation">
+		<title>蒙特卡洛仿真方法计算圆周率π</title>
+		<link rel="stylesheet" type="text/css" href="./css/main.css"/>
+		<script src="./js/mc_pi.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 数学公式 -->
+		<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			inlineMath: [['$','$']]
+			}
+		});
+		</script>
+	</head>
+	<body onload="LoadArc();">
+		<h1>蒙特卡洛仿真方法计算π</h1>
+		<div id="MonteCarloCalcPiDemo_div" style="width: 900px;">
+			<p>基本思路：在下方边长为1的正方形内部，随机产生n个点，这些点服从均匀分布即这些点将均匀的分布在整个正方形中，正方形内有一个1/4圆，圆心在正方形的左上角顶点处，正方形和圆的半径都是1，因此正方形的面积为1，1/4圆的面积为$ \pi \over 4 $，<b>均匀撒下的点落在圆内的概率就是这1/4圆与正方形的面积之比即$ \pi \over 4 $:1，从而我们将将计算$\pi$的问题转换为多次散点后圆内点数出现的概率的问题</b>，计算这些点与圆心(设置在正方形的左上角)的距离是否大于圆的半径，以此判断是否落在圆的内部。统计圆内的点数，与n的比值乘以4，就可以得到近似$\pi$的值。理论上，n越大，计算的$\pi$值越准。</p>
+			 <form name="form">
+				 <p>请输入撒点个数n：</p>
+				 <input type="text" name="element" id="MonteCarloCalcPiDemo_TotalNum" value="50"/>
+			</form>
+			
+			<canvas id="myCanvas" width="500" height="500"
+			style="border:1px solid #000000;">您的浏览器版本过低，不支持canvas，请升级浏览器！</canvas>
+			<br/>
+			<p>记正方形框内总点数为 $totalNum ,圆内点数为 $inCount , 圆内为红点圆外为蓝点, 则 $$\pi \approx { 4*inCount \over totalNum}$$</p>
+			<button onclick="MonteCarloCalcPi()" onmousedown="WaitCalc()">点我开始撒点并运算</button>
+			<p id="MonteCarloCalcPiDemo">这里显示计算结果</p>
+		</div>
+	<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1280822746'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1280822746%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+	</body>
+</html>

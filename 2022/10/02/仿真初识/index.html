@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha256-AbA177XfpSnFEvgpYu1jMygiLabzPCJCRIBtR5jGc0k=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"demosright.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="1. 初识仿真1.1 何时适用仿真普遍认为仿真可用于如下目标：  研究复杂系统或其子系统之间的内部互动关系 对影响系统的信息变化、组织变化和环境变化进行模拟，进而观测这些变化对模型行为的影响 仿真模型过程中所获得的相关知识，对于研究系统的改进具有重要价值 通过调整仿真输入，就可以观测对应输出的变化，有助于了解哪些输入是关键变量，以及变量之间是如何影响的 作为分析工具、教学工具来弥补解析法的不足 在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《离散事件系统仿真》学习笔记 - 1. 初识仿真">
+<meta property="og:url" content="https://demosright.github.io/2022/10/02/%E4%BB%BF%E7%9C%9F%E5%88%9D%E8%AF%86/index.html">
+<meta property="og:site_name" content="D.R. Write">
+<meta property="og:description" content="1. 初识仿真1.1 何时适用仿真普遍认为仿真可用于如下目标：  研究复杂系统或其子系统之间的内部互动关系 对影响系统的信息变化、组织变化和环境变化进行模拟，进而观测这些变化对模型行为的影响 仿真模型过程中所获得的相关知识，对于研究系统的改进具有重要价值 通过调整仿真输入，就可以观测对应输出的变化，有助于了解哪些输入是关键变量，以及变量之间是如何影响的 作为分析工具、教学工具来弥补解析法的不足 在">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-02T09:42:13.000Z">
+<meta property="article:modified_time" content="2022-10-30T12:44:44.284Z">
+<meta property="article:author" content="DemosRight">
+<meta property="article:tag" content="算法原理">
+<meta property="article:tag" content="计算机科学">
+<meta property="article:tag" content="仿真技术">
+<meta property="article:tag" content="仿真">
+<meta property="article:tag" content="概述">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://demosright.github.io/2022/10/02/%E4%BB%BF%E7%9C%9F%E5%88%9D%E8%AF%86/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://demosright.github.io/2022/10/02/%E4%BB%BF%E7%9C%9F%E5%88%9D%E8%AF%86/","path":"2022/10/02/仿真初识/","title":"《离散事件系统仿真》学习笔记 - 1. 初识仿真"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>《离散事件系统仿真》学习笔记 - 1. 初识仿真 | D.R. Write</title>
+  
+
+  <script src="/js/third-party/analytics/baidu-analytics.js"></script>
+  <script async src="https://hm.baidu.com/hm.js?791d05cadf189063a86fc20cccd75c27"></script>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">D.R. Write</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">胸怀天下，拓展认知</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%88%9D%E8%AF%86%E4%BB%BF%E7%9C%9F"><span class="nav-number">1.</span> <span class="nav-text">1. 初识仿真</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E4%BD%95%E6%97%B6%E9%80%82%E7%94%A8%E4%BB%BF%E7%9C%9F"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 何时适用仿真</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E4%BD%95%E6%97%B6%E4%B8%8D%E9%80%82%E7%94%A8%E4%BB%BF%E7%9C%9F"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 何时不适用仿真</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E4%BB%BF%E7%9C%9F%E7%9A%84%E4%BC%98%E5%8A%BF%E4%B8%8E%E5%8A%A3%E5%8A%BF"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 仿真的优势与劣势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E5%BA%94%E7%94%A8%E9%A2%86%E5%9F%9F"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 应用领域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-%E8%BF%91%E5%B9%B4%E6%9D%A5%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 近年来的应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 系统与系统环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-%E7%B3%BB%E7%BB%9F%E8%A6%81%E7%B4%A0"><span class="nav-number">1.7.</span> <span class="nav-text">1.7 系统要素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-8-%E7%A6%BB%E6%95%A3%E7%B3%BB%E7%BB%9F%E4%B8%8E%E8%BF%9E%E7%BB%AD%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.8.</span> <span class="nav-text">1.8 离散系统与连续系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-9-%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.9.</span> <span class="nav-text">1.9 系统模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-10-%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="nav-number">1.10.</span> <span class="nav-text">1.10 模型的种类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-11-%E7%A6%BB%E6%95%A3%E4%BA%8B%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%BB%BF%E7%9C%9F"><span class="nav-number">1.11.</span> <span class="nav-text">1.11 离散事件系统仿真</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-12-%E4%BB%BF%E7%9C%9F%E7%A0%94%E7%A9%B6%E7%9A%84%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.12.</span> <span class="nav-text">1.12 仿真研究的步骤</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DemosRight</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://demosright.github.io/2022/10/02/%E4%BB%BF%E7%9C%9F%E5%88%9D%E8%AF%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DemosRight">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="D.R. Write">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="《离散事件系统仿真》学习笔记 - 1. 初识仿真 | D.R. Write">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《离散事件系统仿真》学习笔记 - 1. 初识仿真
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-02 17:42:13" itemprop="dateCreated datePublished" datetime="2022-10-02T17:42:13+08:00">2022-10-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-30 20:44:44" itemprop="dateModified" datetime="2022-10-30T20:44:44+08:00">2022-10-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Research-Development-%E7%A7%91%E6%8A%80%E6%94%B9%E5%8F%98%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">Research&Development 科技改变生活</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="1-初识仿真"><a href="#1-初识仿真" class="headerlink" title="1. 初识仿真"></a>1. 初识仿真</h1><h2 id="1-1-何时适用仿真"><a href="#1-1-何时适用仿真" class="headerlink" title="1.1 何时适用仿真"></a>1.1 何时适用仿真</h2><p>普遍认为仿真可用于如下目标：</p>
+<ol>
+<li>研究复杂系统或其子系统之间的内部互动关系</li>
+<li>对影响系统的信息变化、组织变化和环境变化进行模拟，进而观测这些变化对模型行为的影响</li>
+<li>仿真模型过程中所获得的相关知识，对于研究系统的改进具有重要价值</li>
+<li>通过调整仿真输入，就可以观测对应输出的变化，有助于了解哪些输入是关键变量，以及变量之间是如何影响的</li>
+<li>作为分析工具、教学工具来弥补解析法的不足</li>
+<li>在新方案、新策略实施前，对其进行实验，以便对可能发生的情况作出预判</li>
+<li>可用于验证解析解</li>
+<li>可通过模拟设备的不同能力，确定设备可需数量</li>
+<li>以训练为目的设计的仿真模型使得离线学习成为可能，这既不会对正常运行的系统造成影响，也不会因此而增加成本。</li>
+<li>仿真动画可以展示系统的运行过程，从而使得方案可视化</li>
+<li>现代系统（工厂、晶圆制造厂、服务组织，等等）内部过于复杂，以至于其内部交互过程只能通过仿真进行研究</li>
+</ol>
+<h2 id="1-2-何时不适用仿真"><a href="#1-2-何时不适用仿真" class="headerlink" title="1.2 何时不适用仿真"></a>1.2 何时不适用仿真</h2><ol>
+<li>当能够借助常识解决系统问题时，就不应该使用仿真</li>
+<li>如果能够使用解析法求解，就没必要使用仿真</li>
+<li>如果仿真成本高于直接实验的成本，就不要使用仿真</li>
+<li>如果仿真成本超过所节省的费用，则不要使用仿真<ul>
+<li>完整的仿真过程有很多步骤必须完全执行，可能带来较高成本</li>
+</ul>
+</li>
+<li>如果资源不充裕，不要使用仿真</li>
+<li>如果时间不充裕，不要使用仿真</li>
+<li>仿真过程需要使用数据，有时是大量数据，如果没有数据可用不要使用仿真<ul>
+<li>至少应有较为合理的估计数据</li>
+</ul>
+</li>
+<li>该法则关心模型校核(verify)和验证(validate)能力的问题。如果可用校核和验证的时间或人力不足，则不宜采用仿真</li>
+<li>如果管理者有不切实际的期望，不建议采用仿真<ul>
+<li>比如他们要求太多，但预留的时间很少</li>
+</ul>
+</li>
+<li>如果系统过于复杂或者无法定义，则不建议使用仿真，人的行为有时对于建模而言过于复杂</li>
+</ol>
+<h2 id="1-3-仿真的优势与劣势"><a href="#1-3-仿真的优势与劣势" class="headerlink" title="1.3 仿真的优势与劣势"></a>1.3 仿真的优势与劣势</h2><p>直观上，仿真能够迎合用户，因为它模仿实际系统可能出现的情况，或者帮助认知一个尚在设计阶段的系统。仿真输出数据是对实际系统输出的直接写照。此外，不依赖于牵强的假设而建立一个系统的仿真模型是可能的。</p>
+<p>相对于优化模型，仿真模型更侧重于 <strong>“运行(run)”</strong> 而非 <strong>“求解(solve)”</strong>。给定某个输入集和模型特征参数之后，仿真模型就可以运行，所以模型的系统行为会被观测到。改变输入参变量或模型特征参数会生成一系列的 **场景(scenario)**，这些场景就是我们要评估的方案。一个好的解决方案，无论是基于现有系统或新设计系统，将被推荐实施。</p>
+<p>仿真的优势：</p>
+<ol>
+<li>可以在不影响现有系统正常运行的情况下研究和分析新策略、处理过程、决策规则、信息流、组织流程等。</li>
+<li>可以在不消耗资源的情况下测试新硬件设计方案、物理布局、交通系统等带来的收益。</li>
+<li>针对某种现象发生可能的成因或机理，可检验其可行性。</li>
+<li>仿真环境下，时间可以被压缩或延长，以实现所研究现象的的加速或减速。</li>
+<li>借助仿真可以内窥系统变量之间的相互作用。</li>
+<li>借助仿真可以内窥影响系统性能的诸多变量的重要性。</li>
+<li>基于仿真的瓶颈分析，可揭示哪些过程或环节会造成生产流程、信息、物料等要素的过度延迟。</li>
+<li>可以回答what-if的问题，这对于新系统设计而言尤为有用。</li>
+</ol>
+<p>仿真的劣势：</p>
+<ol>
+<li>建模需特殊训练。建模具有艺术性、专业性，需要时间和经验的积累。如果两个模型由不同人完成，可能具有某些相似性，但却可能由本质上的差别。</li>
+<li>仿真结果难以预测，是否准确反应系统本质也可能存在Gap。<ul>
+<li>大多数仿真输出实质上是一些随机的变量（仿真输出基于随机性输入），因此难以辨认哪些系统输出值是系统本质的真实体现，哪些是随机性造成的</li>
+</ul>
+</li>
+<li>仿真模型和分析工作需耗费时间和金钱。如果消减建模和分析所需的资源，会导致工作效果不充分。</li>
+<li>某些问题可通过仿真求解，但是可能更适合使用解析法求解。</li>
+</ol>
+<p>如果为仿真辩解的话，上述四点不足也有其应对策略：</p>
+<ol>
+<li>仿真软件是开发商提供的高效开发工具包，其中包含一些模型，只需要输入数据即可使用。此类模型被称为 <strong>模拟器（simulator）</strong> 或 <strong>模板（template）</strong>。</li>
+<li>许多仿真软件开发商在软件包中集成了输出分析的能力，可对相关系统进行全面分析。</li>
+<li>目前的仿真执行速度很快，未来会更快，这源于硬件能力的提升，也源于仿真软件的不断发展。</li>
+<li>闭式模型无法用于分析我们在实践中遇到的大多数复杂系统。许多长期从事咨询业务的专家表示几乎没有的可以使用闭式方法求解的问题。</li>
+</ol>
+<h2 id="1-4-应用领域"><a href="#1-4-应用领域" class="headerlink" title="1.4 应用领域"></a>1.4 应用领域</h2><p>按领域分类如下：</p>
+<ul>
+<li>生产制造</li>
+<li>晶圆制造</li>
+<li>业务流程管理</li>
+<li>建设工程和项目管理</li>
+<li>物流、运输和分销</li>
+<li>军事</li>
+<li>医疗保健</li>
+<li>其他</li>
+</ul>
+<h2 id="1-5-近年来的应用"><a href="#1-5-近年来的应用" class="headerlink" title="1.5 近年来的应用"></a>1.5 近年来的应用</h2><ul>
+<li>题目：土耳其军队利用仿真方法对油料供应系统进行建模和优化，《Interfaces》杂志，2015.11</li>
+<li>题目：PLATO系统助力雅典夺冠：用于组织转换和资源管理的奥运竞技知识模型，《Interfaces》杂志，2016.1</li>
+<li>题目：Schlumberger利用仿真方法进行国土地震调查项目投标和项目执行，《Interfaces》杂志，2007.3</li>
+<li>题目：利用运筹学方法帮助SRC公司重塑运营战略，《Interfaces》杂志，2007.11</li>
+<li>题目：应用仿真手段解决基于需求导向的服务业人力排班问题，2007冬季仿真大会论文集</li>
+<li>题目：在家电制造企业应用仿真手段提升生产线末端产品分拣和物料搬运及理货计划，2007冬季仿真大会论文集</li>
+</ul>
+<h2 id="1-6-系统与系统环境"><a href="#1-6-系统与系统环境" class="headerlink" title="1.6 系统与系统环境"></a>1.6 系统与系统环境</h2><p>实施系统建模之前，需要对系统以及系统边界有所了解。<strong>所谓系统，是指为了实现某种目标而组合在一起的对象的集合，这些对象之间依照规则彼此交互、相互依存。</strong></p>
+<p>系统常常被系统外部环境发生的变化所影响，我们说这些变化发生在系统外部环境之中。<strong>在开展系统建模的时候，需要确定系统与其外部环境之间的边界。边界的划分取决于所研究问题的目标（问题目标不同，边界也可能不同）。</strong></p>
+<h2 id="1-7-系统要素"><a href="#1-7-系统要素" class="headerlink" title="1.7 系统要素"></a>1.7 系统要素</h2><p>为理解和分析系统，我们需要定义一些术语。</p>
+<ul>
+<li>**实体(entity)**：是存在于系统中的、所研究的对象。</li>
+<li>**属性(attribute)**：是实体的特征。</li>
+<li>**活动(activity)**：是指具有一定长度的时间段</li>
+</ul>
+<p>以银行系统为例，顾客是实体，顾客账户余额是属性，存款是活动。</p>
+<ul>
+<li>**状态(state)**：是描述系统中与研究目标相关的所有变量的集合。</li>
+<li>**事件(event)**：是引起系统状态变化的 **瞬间发生的事情(instantaneous occurrence)**。</li>
+<li>**内生(endogenous)**：是指在系统内部发生的活动和事件。</li>
+<li>**外生(exogenous)**：是指发生在外部环境中、对心态造成影响的活动和事件。</li>
+</ul>
+<p>在银行案例中，顾客达到是一个外生事件，顾客完成服务是一个内生事件。</p>
+<p>举例说明：</p>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>实体</th>
+<th>属性</th>
+<th>活动</th>
+<th>事件</th>
+<th>状态变量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>银行</td>
+<td>顾客</td>
+<td>支票账户余额</td>
+<td>存款</td>
+<td>到达；离开</td>
+<td>繁忙柜员数量；等待顾客数量</td>
+</tr>
+<tr>
+<td>快速铁路</td>
+<td>乘客</td>
+<td>起点；终点</td>
+<td>旅行</td>
+<td>抵达起始车站；到达目的地</td>
+<td>在各个车站等候的乘客数量；行驶列车中的乘客数量</td>
+</tr>
+<tr>
+<td>生产车间</td>
+<td>机器设备</td>
+<td>速度；能力；故障率</td>
+<td>焊接；冲压</td>
+<td>故障</td>
+<td>机器状态（繁忙、空闲、宕机）</td>
+</tr>
+<tr>
+<td>通信系统</td>
+<td>信息</td>
+<td>长度；目的地址</td>
+<td>传输</td>
+<td>到达目的地址</td>
+<td>待传输信息数量</td>
+</tr>
+<tr>
+<td>库存</td>
+<td>仓库</td>
+<td>仓储能力</td>
+<td>物料回收</td>
+<td>物料需求</td>
+<td>库存水平；积压的需求</td>
+</tr>
+</tbody></table>
+<h2 id="1-8-离散系统与连续系统"><a href="#1-8-离散系统与连续系统" class="headerlink" title="1.8 离散系统与连续系统"></a>1.8 离散系统与连续系统</h2><p>系统分为离散型和连续型两大类。现实系统很少能单纯的归类为离散系统或连续系统，但对于大多数系统而言，总有一种类型居于支配地位，所以将其划分为离散系统或者连续系统还是有可能的。</p>
+<p>**离散系统(discrete system)**：是指系统状态变量仅在时间轴的离散点集上发生改变。</p>
+<p>**连续系统(continuous system)**：是指其状态变量随时间变化而连续变化的系统。</p>
+<h2 id="1-9-系统模型"><a href="#1-9-系统模型" class="headerlink" title="1.9 系统模型"></a>1.9 系统模型</h2><p>我们有时希望研究一个系统，以了解其内部要素之间的关系，或者预测新方案对系统运作的影响。某些情况下可以借助系统本身进行实验。然而，这种方法并不总是可行，因为新系统可能并不存在，仅停留在概念、模式或设计阶段，即使系统存在，也可能无法使用其进行实验。在银行案例中，如果减少柜员数量，以研究顾客队列长度的变化情况，很可能会造成顾客的不满，从而将其银行账户转至该银行的竞争者处。因此，系统研究多借助系统模型来完成。</p>
+<p><strong>模型</strong> 是指为进行系统研究而定义的 <strong>“系统表示(representation of a system)”</strong>。对大多数研究而言，<strong>只需要考虑那些会影响所研究问题的系统因素，这些因素需要在系统模型中得到展现。</strong></p>
+<p>按照定义，<strong>模型是对实际系统的简化，另一方面，模型在某些地方又要足够详细，以保证获得与真实情况一致的有效结论。针对同一个系统，如果研究目标不同，则需要建立不同的模型。</strong></p>
+<p>正如系统要素包括实体、属性以及活动，模型中也要体现这些内容。然而，模型只需要包括那些与研究目标相关的要素即可。</p>
+<h2 id="1-10-模型的种类"><a href="#1-10-模型的种类" class="headerlink" title="1.10 模型的种类"></a>1.10 模型的种类</h2><p>模型分为数学模型和物理模型。数学模型运用系统符号和数学公式来表征。系统仿真模型是一类特殊的数学模型，物理模型是研究对象的放大或缩小版本，如原子的放大模型或太阳系的微缩模型。</p>
+<p>仿真模型可以进一步划分为**静态型(static)、动态型(dynamic)、确定型(deterministic)、随机型(stochastic)，离散型(discrete)与连续型(continuous)**。</p>
+<p>**静态仿真模型也称为蒙特卡洛仿真(Monte Carlo Simulation)**。表真的是处于某个指定时刻的系统，系统特性不随时间变化而改变，动态仿真模型则表真特性，随时间而改变的系统。从上午九点到下午四点的银行系统仿真就是一个动态仿真过程。</p>
+<p>不包含随机变量的仿真模型是确定型的。在确定型模型中，若模型输入一定，则输出是确定且唯一的。如果所有病人都按照预定时间到达，那么牙科诊所中的病人到达就是确定型的。 <strong>随机型仿真模型的输入中包含一个以上的随机型变量，随机输入会导致输出的随机性。由于仿真输出的随机性，因此，它被认为是对仿真模型真实属性的一次估计。</strong> 银行系统仿真案例，通常包含随机的顾客到达时间间隔和随机的服务时间，那么在随机性仿真中，仿真输出度量指标，如排队等待顾客的平均数，每位顾客的平均等待时间被看作系统真实特征的统计估计。</p>
+<p>离散模型和连续模型也可以用类似的方式进行定义。然而，离散仿真模型并不总是用于离散系统建模。同样的，连续仿真模型也并不总是用于连续系统建模。罐体和管道可以用于离散方式建模，虽然我们都知道液体流动是连续的，此外仿真模型也可以是混合的，也就是离散型和连续型的混合使用。选择离散型还是连续型仿真模型取决于所研究系统的特征以及研究对象。如果考察的数据包的特性。如果考察数据包的特性以及传递过程，那么通信信道就可以采用离散方式建模。相反，如果考察信道中数据流的整体性，那么采用连续方式建模更合适。<strong>我们重点讨论动态型、随机型和离散型仿真模型。</strong></p>
+<h2 id="1-11-离散事件系统仿真"><a href="#1-11-离散事件系统仿真" class="headerlink" title="1.11 离散事件系统仿真"></a>1.11 离散事件系统仿真</h2><p>本书是一本关于离散事件系统仿真(discrete-event system simulation)的教材的读书笔记。离散事件系统仿真是对这样的系统进行建模：系统状态变量仅在离散的时间点发生改变，仿真模型使用数值方法，而非解析方法进行分析和求解。解析方法采用数学演绎推导法对模型求解。例如，微积分可用于计算库存模型中的最小成本策略。<strong>数值方法采用数字计算方法(computational procedures)求解数学模型。采用数值方法的仿真模型，其结果是运行出来的，而非解析出来的。</strong> 也就是说，通过模型假设人工在线系统的过去，然后搜索观测值，用于分析和评价系统的真实性能。针对实际问题所构建的仿真模型规模较大，需要存储和管理的数据也十分巨大，因此仿真过程需要借助计算机来完成。总体来说，本书介绍的是离散离散事件，系统仿真需要采用数值方法进行建模和分析，需要借助计算机加以实现。</p>
+<h2 id="1-12-仿真研究的步骤"><a href="#1-12-仿真研究的步骤" class="headerlink" title="1.12 仿真研究的步骤"></a>1.12 仿真研究的步骤</h2><p>仿真研究的步骤如下：</p>
+<ol>
+<li>问题构想<ul>
+<li>研究工作应从问题描述开始。如果由决策者或者问题提出者进行问题描述，分析人员应确保对该问题有清晰的理解。如果由分析人员进行问题描述，一定要经决策者理解并认可。</li>
+<li>在研究过程中，偶尔需要对问题描述进行完善和修订。在很多案例中，决策者和分析人员会意识到某个问题的存在，但是需要经过很长时间才能对该问题有实质上的理解。</li>
+</ul>
+</li>
+<li>设定目标和整体项目规划<ul>
+<li>目标指明了需要通过仿真回答的疑问</li>
+<li>首先要确认仿真手段是否就是解决该问题及相应目标的最合适的方法</li>
+<li>若适用，整体项目计划中还应该包含多个系统备选方案的说明，以及对备选方案的性能评价方法</li>
+<li>研究计划还应包括所需人员、成本、各阶段工作天数，以及各阶段结束时的预期效果</li>
+</ul>
+</li>
+<li>模型的概念化<ul>
+<li>系统建模兼具科学性与艺术性</li>
+<li>虽然不可能提出一套保证每个仿真建模项目都能成功的操作指南，但仍有一些通用性准则可以遵循</li>
+<li>善于提炼出问题本质的能力有助于提升建模技巧，选择或调整那些揭示系统特征的基本假设，可以使模型得到增强和细化，最终得到有用的近似解。</li>
+<li>最好从建立简单模型起步，逐步加深模型的复杂度。</li>
+<li>模型复杂度不宜超过模型预期目标的要求，违反该原则只会增加建模成本和运算成本。</li>
+<li>模型和实际系统不必一一对应，只需包含实际系统的主要特征即可。</li>
+<li>我们建议在模型概念化、设计工作中，让模型的最终用户参与其中。用户参与一方面可以增强最终模型的质量，也可以增加用户对模型应用的信心。</li>
+</ul>
+</li>
+<li>数据搜集<ul>
+<li>模型构建与输入数据搜集之间存在持续不断的相互作用和影响的关系。</li>
+<li>随着模型越来越复杂，所需要的输入数据也会随之改变。</li>
+<li>在整个仿真研究过程中，数据搜集会占用大量时间，因而需要尽早启动。</li>
+<li>一般在模型构建的初期，就应该开始很大程度上研究目标，决定所需搜集数据的内容。</li>
+</ul>
+</li>
+<li>模型转译<ul>
+<li>大多数现实系统所构建的模型需要庞大的信息存储和计算能力，因此模型需要以计算机可识别的格式进行研制。</li>
+<li>大多数情况下，我们使用术语程序表示计算机编码的模型，即使建模过程中很少或者完全不用编写程序代码的时候也使用该术语。</li>
+<li>建模人员需要决定是使用仿真语言还是专用仿真软件。</li>
+</ul>
+</li>
+<li>校核<ul>
+<li>用于计算机编程的代码校核（程序代码调试）同样适用于仿真建模，软件是否能正确运行，对于复杂系统而言，虽然具有一定的可能性，但是不进行大量调试而实现成功建模是很困难的。</li>
+<li>如果模型的输入参数和逻辑结构都能由计算机程序完美体现，那么校核工作就完成了。</li>
+<li>大多数情况下，人们对于完成此步骤的标准是有共识的。</li>
+</ul>
+</li>
+<li>验证<ul>
+<li>验证常常通过模型校准(collaboration)完成，既通过迭代对比模型与现实系统之间的行为差异，不断获得更深入的理解，从而实现模型的改进。</li>
+<li>这是一个重复的过程，直至模型精度达到可接受的程度为止。</li>
+</ul>
+</li>
+<li>实验设计<ul>
+<li>对于具有多个备选方案的系统，需要确定对哪些方案进行仿真</li>
+<li>通常需要依据已经完成的仿真运算和分析结果来确定最终的方案。</li>
+<li>对于待仿真的每一个系统方案决定是否对其进行仿真时，都需要考虑初始化阶段的时间长度、仿真运行时长以及每个方案的重复仿真次数(number of replication)。</li>
+</ul>
+</li>
+<li>正式运行与分析<ul>
+<li>仿真模型的正式运行及后续分析用于估计系统方案的性能。</li>
+</ul>
+</li>
+<li>是否需要进一步运行<ul>
+<li>即使运行分析已经完成，分析人员还需要决定是否进行更多次仿真，以及哪一个方案需要更多的实验</li>
+</ul>
+</li>
+<li>编写文档和报告<ul>
+<li>需要编写两类文档，程序文档和过程报告。</li>
+<li><strong>程序文档</strong>：有多种用途<ol>
+<li>如果程序会被开发他的分析人员或者其他分析人员重复使用，他们需要了解程序是如何运行的，这样可以增强大家对模型的信任度。最终用户和决策者才能以分析结果为依据进行决策。</li>
+<li>此外，如果程序被修改，拥有拥有详细的记录，也是有百利而无一害的，由于缺少文本记录而造成的不便，更容易让分析人员意识到文档维护的重要性。</li>
+<li>文档编写的另一个原因是，最终用户可以根据意愿调整参数，以了解输入参数和输出性能之间的关系，或者寻找能够实现输出优化的那些参数。</li>
+</ol>
+</li>
+<li><strong>过程报告</strong>：对于记录仿真项目历史过程的重要性<ol>
+<li>项目报告记录了工作和决策的时间列表，这对于保证项目正确进行很有价值。</li>
+<li>建议经常性的报告至少每个月一次，以便那些非日常工作也能被记录在案。</li>
+<li>通过及早消除误解，项目成功的概率就会得到提高，各种问题也更容易解决。</li>
+<li>建议通过维护项目日志，从而提供全面的记录，这些记录包括<strong>项目完成情况变更请求、关键性决策以及其他重要事项</strong>。</li>
+<li>站在报告者的角度，建议经常性的发布此类报告，不一定非得有重要成果才发布通报。</li>
+<li>相对于一个竣工时间点，在项目工期中设置多个里程碑会有更多好处。</li>
+<li>在完在完成最终报告之前，可能的话还可以提供<strong>模型规范说明、原型演示动画、培训效果、事中分析、程序文档、过程报告以及演示文件</strong>。建议这些可交付物，应在项目生命周期内按时完成。</li>
+</ol>
+</li>
+<li>所有分析结果都应在最终报告中给予清晰反应和准确体现，这样可以<strong>让最终用户(而非决策者)检查模型的最终形式、待议的系统方案、方案比较的指标、仿真实验的结果以及对所研究问题的推荐方案</strong>。进一步的，如果决策来自更高层级的管理者，最终报告<strong>还需要由最终用户和决策者进行一轮鉴定，以确保模型和建模过程的可信度</strong>。</li>
+</ul>
+</li>
+<li>部署<ul>
+<li>部署工作成功与否取决于前面所有11个步骤的执行效果，也和系统分析人员是否让最终用户全程参与息息相关。</li>
+<li>如果最终用户全程参与了仿真模型的建设过程，对模型及其输出完全了解，那么成功部署的可能性就会大大提升。反之，<strong>如果参与者未就模型及其潜在的假设进行充分沟通，无论仿真模型做的多么好，实施过程也会遇到问题</strong>。</li>
+</ul>
+</li>
+</ol>
+<p>如下图所示的仿真建模过程可以划分为四个阶段</p>
+<ul>
+<li>第一阶段：包含第一步 <strong>（问题构想）</strong> 和第二步 <strong>（设定目标和整体项目规划）</strong> 是 <strong>问题发现和定位阶段</strong>。<strong>问题的最初表述往往非常模糊，最初的目标通常会被重新设定，最初的项目计划往往会进行调整。此类重复校准和再度厘清的情况，有可能在本阶段或后续阶段发生</strong>。例如，分析人员可能重复第一阶段的工作。</li>
+<li>第二阶段：涉及<strong>建模和数据采集</strong>，包括第三步 <strong>（模型的概念化）</strong>，第四步 <strong>（数据搜集）</strong>，第五步 <strong>（模型转译）</strong>，第六步 <strong>（校核）</strong> 以及第七步 <strong>（验证）</strong>。这些步骤之间相互影响、相互作用，将最终用户排除在本阶段工作之外，将为成果部署埋下失败的伏笔。</li>
+<li>第三阶段：与模型运行有关，包括第八步 <strong>（实验设计）</strong>、第九步 <strong>（正式运行与分析）</strong>和第十步 <strong>（是否需要进一步运行）</strong>。<strong>该阶段必须针对仿真模型的实验设计制定全面可信的实施方案</strong>。实质上，<strong>离散事件随机仿真就是一类统计实验</strong>，由于输出变量包含随机误差，因此，<strong>需要借助合适的统计分析方法，对其进行估计</strong>。与此相反，如果只依靠一次仿真运行的结果就对系统性能做出推断，往往会得出错误的结<strong>论</strong>，这显然是不对的。</li>
+<li>第四阶段：也就是部署阶段，包括第11步 <strong>（编写文档和报告）</strong> 和第12步 <strong>（部署）</strong>。成功的部署有赖于最终用户的持续参与，以及前面各阶段工作的顺利完成。<strong>在整个过程中，第七步验证或许是最关键的，因为无效的模型肯定导致错误的结论，一旦实施就会带来危险，并且浪费投资。</strong></li>
+</ul>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="805px" preserveAspectRatio="none" style="width:269px;height:805px;background:#FFFFFF;" version="1.1" viewBox="0 0 269 805" width="269px" zoomAndPan="magnify"><defs/><g><ellipse cx="121" cy="20" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;"/><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="82" y="50"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="92" y="71.1387">"问题构思"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="40" y="103.9688"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="142" x="50" y="125.1074">"设定目标和整体项目规划"</text><rect fill="#555555" height="6" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:1.0;" width="220" x="11" y="201.9375"/><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="90" x="23" y="227.9375"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="70" x="33" y="249.0762">"模型概念化"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="141" y="227.9375"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="151" y="249.0762">"数据搜集"</text><polygon fill="#F1F1F1" points="121,271.9063,133,283.9063,121,295.9063,109,283.9063,121,271.9063" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="82" y="315.9063"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="92" y="337.0449">"模型转译"</text><polygon fill="#F1F1F1" points="91,389.875,151,389.875,163,401.875,151,413.875,91,413.875,79,401.875,91,389.875" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="125" y="424.0854">"是"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="91" y="405.6831">"校核通过?"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="163" y="399.2808">"否"</text><polygon fill="#F1F1F1" points="121,157.9375,133,169.9375,121,181.9375,109,169.9375,121,157.9375" style="stroke:#181818;stroke-width:0.5;"/><polygon fill="#F1F1F1" points="88.5,445.5854,153.5,445.5854,165.5,457.5854,153.5,469.5854,88.5,469.5854,76.5,457.5854,88.5,445.5854" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="125" y="479.7959">"是"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="88.5" y="461.3936">"验证合格？"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="165.5" y="454.9912">"否"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="64" y="555.2646"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="94" x="74" y="576.4033">"正式运行与分析"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="82" y="501.2959"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="92" y="522.4346">"实验设计"</text><polygon fill="#F1F1F1" points="66.5,609.2334,175.5,609.2334,187.5,621.2334,175.5,633.2334,66.5,633.2334,54.5,621.2334,66.5,609.2334" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="125" y="643.4438">"否"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="66.5" y="625.0415">"是否需要进一步运行"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="187.5" y="618.6392">"是"</text><path d="M69,664.9438 L64,681.9282 L69,698.9126 M173,664.9438 L178,681.9282 L173,698.9126 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="94" x="74" y="686.0825">"文档编写及报告"</text><polygon fill="#F1F1F1" points="104,718.9126,148,718.9126,138,752.8813,94,752.8813" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="34" x="104" y="740.0513">"部署"</text><ellipse cx="121" cy="783.8813" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:1.0;"/><ellipse cx="121" cy="783.8813" fill="#222222" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="30" y2="50"/><polygon fill="#181818" points="117,40,121,50,125,40,121,44" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="83.9688" y2="103.9688"/><polygon fill="#181818" points="117,93.9688,121,103.9688,125,93.9688,121,97.9688" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="68" x2="68" y1="207.9375" y2="227.9375"/><polygon fill="#181818" points="64,217.9375,68,227.9375,72,217.9375,68,221.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="180" x2="180" y1="207.9375" y2="227.9375"/><polygon fill="#181818" points="176,217.9375,180,227.9375,184,217.9375,180,221.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="68" x2="68" y1="261.9063" y2="283.9063"/><line style="stroke:#181818;stroke-width:1.0;" x1="68" x2="109" y1="283.9063" y2="283.9063"/><polygon fill="#181818" points="99,279.9063,109,283.9063,99,287.9063,103,283.9063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="180" x2="180" y1="261.9063" y2="283.9063"/><line style="stroke:#181818;stroke-width:1.0;" x1="180" x2="133" y1="283.9063" y2="283.9063"/><polygon fill="#181818" points="143,279.9063,133,283.9063,143,287.9063,139,283.9063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="349.875" y2="389.875"/><polygon fill="#181818" points="117,379.875,121,389.875,125,379.875,121,383.875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="163" x2="175" y1="401.875" y2="401.875"/><polygon fill="#181818" points="171,369.875,175,359.875,179,369.875,175,365.875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="175" x2="175" y1="332.8906" y2="401.875"/><line style="stroke:#181818;stroke-width:1.0;" x1="175" x2="160" y1="332.8906" y2="332.8906"/><polygon fill="#181818" points="170,328.8906,160,332.8906,170,336.8906,166,332.8906" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="295.9063" y2="315.9063"/><polygon fill="#181818" points="117,305.9063,121,315.9063,125,305.9063,121,309.9063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="181.9375" y2="201.9375"/><polygon fill="#181818" points="117,191.9375,121,201.9375,125,191.9375,121,195.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="165.5" x2="243" y1="457.5854" y2="457.5854"/><polygon fill="#181818" points="239,333.4063,243,323.4063,247,333.4063,243,329.4063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="243" x2="243" y1="169.9375" y2="457.5854"/><line style="stroke:#181818;stroke-width:1.0;" x1="243" x2="133" y1="169.9375" y2="169.9375"/><polygon fill="#181818" points="143,165.9375,133,169.9375,143,173.9375,139,169.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="413.875" y2="445.5854"/><polygon fill="#181818" points="117,435.5854,121,445.5854,125,435.5854,121,439.5854" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="137.9375" y2="157.9375"/><polygon fill="#181818" points="117,147.9375,121,157.9375,125,147.9375,121,151.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="535.2646" y2="555.2646"/><polygon fill="#181818" points="117,545.2646,121,555.2646,125,545.2646,121,549.2646" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="187.5" x2="199.5" y1="621.2334" y2="621.2334"/><polygon fill="#181818" points="195.5,579.7568,199.5,569.7568,203.5,579.7568,199.5,575.7568" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="199.5" x2="199.5" y1="518.2803" y2="621.2334"/><line style="stroke:#181818;stroke-width:1.0;" x1="199.5" x2="160" y1="518.2803" y2="518.2803"/><polygon fill="#181818" points="170,514.2803,160,518.2803,170,522.2803,166,518.2803" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="589.2334" y2="609.2334"/><polygon fill="#181818" points="117,599.2334,121,609.2334,125,599.2334,121,603.2334" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="469.5854" y2="501.2959"/><polygon fill="#181818" points="117,491.2959,121,501.2959,125,491.2959,121,495.2959" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="633.2334" y2="664.9438"/><polygon fill="#181818" points="117,654.9438,121,664.9438,125,654.9438,121,658.9438" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="698.9126" y2="718.9126"/><polygon fill="#181818" points="117,708.9126,121,718.9126,125,708.9126,121,712.9126" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="752.8813" y2="772.8813"/><polygon fill="#181818" points="117,762.8813,121,772.8813,125,762.8813,121,766.8813" style="stroke:#181818;stroke-width:1.0;"/><!--MD5=[8c9abc2b59826626e020ec60fd68ba72]
+@startuml
+start
+
+:"问题构思";
+:"设定目标和整体项目规划";
+repeat 
+  fork
+  :"模型概念化";
+  fork again
+  :"数据搜集";
+  end merge
+  repeat:"模型转译";
+  repeat while ("校核通过?") is("否") not ("是")
+repeat while ("验证合格？") is("否") not ("是")
+
+repeat :"实验设计";
+:"正式运行与分析";
+repeat while ("是否需要进一步运行") is ("是") not("否")
+:"文档编写及报告"}
+:"部署"/
+
+stop
+@enduml
+
+PlantUML version 1.2022.13beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95%E5%8E%9F%E7%90%86/" rel="tag"># 算法原理</a>
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" rel="tag"># 计算机科学</a>
+              <a href="/tags/%E4%BB%BF%E7%9C%9F%E6%8A%80%E6%9C%AF/" rel="tag"># 仿真技术</a>
+              <a href="/tags/%E4%BB%BF%E7%9C%9F/" rel="tag"># 仿真</a>
+              <a href="/tags/%E6%A6%82%E8%BF%B0/" rel="tag"># 概述</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/10/02/hello-world/" rel="prev" title="Hello World">
+                  <i class="fa fa-chevron-left"></i> Hello World
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/10/30/read_paper_method/" rel="next" title="关于读论文的方法的实践与总结">
+                  关于读论文的方法的实践与总结 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DemosRight</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

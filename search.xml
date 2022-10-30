@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>3GPP标准组织</title>
+    <url>/2021/09/05/3gpp_intro/</url>
+    <content><![CDATA[<p>Title: 3GPP标准组织<br>Authors: aTry</p>
+<h1 id="About-3GPP-Home"><a href="#About-3GPP-Home" class="headerlink" title="About 3GPP Home"></a>About 3GPP Home</h1><p>The 3rd Generation Partnership Project (3GPP) unites [Seven] telecommunications standard development organizations (ARIB, ATIS, CCSA, ETSI, TSDSI, TTA, TTC), known as “Organizational Partners” and provides their members with a stable environment to produce the Reports and Specifications that define 3GPP technologies.</p>
+<p>The project covers cellular telecommunications technologies, including radio access, core network and service capabilities, which provide a complete system description for mobile telecommunications.</p>
+<p>The 3GPP specifications also provide hooks for non-radio access to the core network,and for interworking with non-3GPP networks.</p>
+<p>3GPP specifications and studies are contribution-driven, by member companies, in Working Groups and at the Technical Specification Group level.</p>
+<p>The three Technical Specification Groups (TSG) in 3GPP are;</p>
+<pre><code>Radio Access Networks (RAN),
+Services &amp; Systems Aspects (SA),
+Core Network &amp; Terminals (CT) 
+</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">graph TD</span><br><span class="line">    id1(Project Co-ordination Group -- PCG)</span><br><span class="line">    id1 --&gt; id2(TSG RAN)</span><br><span class="line">    id1 --&gt; id3(TSG CT)</span><br><span class="line">    id1 --&gt; id4(TSG SA)</span><br><span class="line">    id2 --&gt; id21(RAN WG1 - L1 PHY)</span><br><span class="line">    id21 --&gt; id22(RAN WG2 - L2+L3 RRC)</span><br><span class="line">    id22 --&gt; id23(RAN WG3 - RAN interface)</span><br><span class="line">    id23 --&gt; id24(RAN WG4 Performance&amp;Protocol)</span><br><span class="line">    id24 --&gt; id25(RAN WG5 Mobile Terminal Conformance Testing)</span><br><span class="line">    id3 --&gt; id31(CT WG1 - UE&amp;Core Network protocols)</span><br><span class="line">    id31 --&gt; id32(CT WG3 - ...Charging Control)</span><br><span class="line">    id32 --&gt; id33(CT WG4 - Core Network Protocols)</span><br><span class="line">    id33 --&gt; id34(CT WG6 - SmartCard&amp;AppAspects)</span><br><span class="line">    id4 --&gt; id41(SA WG1 - Services)</span><br><span class="line">    id41 --&gt; id42(SA WG2 - SystemArchitecture&amp;Services)</span><br><span class="line">    id42 --&gt; id43(SA WG3 - Security&amp;Privacy)</span><br><span class="line">    id43 --&gt; id44(SA WG4 - MultimediaCodecs)</span><br><span class="line">    id44 --&gt; id45(SA WG3 - Management..)</span><br><span class="line">    id45 --&gt; id46(SA WG4 - AppEnbale&amp;CriticalCommunicationApp)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">info</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Research&amp;Development 科技改变生活</category>
+      </categories>
+      <tags>
+        <tag>3GPP</tag>
+        <tag>通信</tag>
+        <tag>标准组织</tag>
+        <tag>国际标准</tag>
+        <tag>通信技术</tag>
+        <tag>通信标准</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MonteCarloSimPi</title>
+    <url>/2022/09/18/MonteCarloSimPi/</url>
+    <content><![CDATA[<h1 id="蒙特卡洛模拟-Monte-Carlo-Simulation"><a href="#蒙特卡洛模拟-Monte-Carlo-Simulation" class="headerlink" title="蒙特卡洛模拟(Monte Carlo Simulation)"></a>蒙特卡洛模拟(Monte Carlo Simulation)</h1><p>又称蒙特卡洛方法，蒙特卡洛仿真，其基本思想是将所要求解问题的答案，等效为为某种事件出现的概率或者某个随机变量的期望值，它们可以通过某种实验的方法，得到这种事件的概率或者随机变量的期望，这就是蒙特卡洛方法的基本思想。</p>
+<a href="/2022/09/18/MonteCarloSimPi/montecarlo.html" title="[蒙特卡洛仿真方法计算圆周率π]">[蒙特卡洛仿真方法计算圆周率π]</a>
+]]></content>
+      <categories>
+        <category>Research&amp;Development 科技改变生活</category>
+      </categories>
+      <tags>
+        <tag>蒙特卡洛</tag>
+        <tag>算法原理</tag>
+        <tag>计算机科学</tag>
+        <tag>仿真技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/10/02/hello-world/</url>
+    <content><![CDATA[<p>R&amp;D 科技改变生活</p>
+<ul>
+<li>R stands for Research</li>
+<li>D stands for Development&#x2F;Design</li>
+<li>分享、记录科学、技术相关学习、体验</li>
+</ul>
+<p>P&amp;L 生活用心感受</p>
+<ul>
+<li>P stands for Peace</li>
+<li>L stands for Love, fully wholehearted love</li>
+<li>用心的分享、记录生活体验</li>
+</ul>
+<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="502px" preserveAspectRatio="none" style="width:426px;height:502px;background:#FFFFFF;" version="1.1" viewBox="0 0 426 502" width="426px" zoomAndPan="magnify"><defs/><g><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="57" x="197.5" y="11"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="37" x="207.5" y="32.1387">Ready</text><rect fill="#F1F1F1" height="33.9688" style="stroke:#181818;stroke-width:0.5;" width="64" x="194" y="64.9688"/><line style="stroke:#181818;stroke-width:0.5;" x1="199" x2="199" y1="64.9688" y2="98.9375"/><line style="stroke:#181818;stroke-width:0.5;" x1="253" x2="253" y1="64.9688" y2="98.9375"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="44" x="204" y="86.1074">next(o)</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="187" y="118.9375"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="197" y="140.0762">Receiving</text><line style="stroke:#181818;stroke-width:1.5;" x1="49.5" x2="389.5" y1="172.9063" y2="172.9063"/><polygon fill="#F1F1F1" points="22.5,253.8594,86.5,253.8594,76.5,270.8438,86.5,287.8281,22.5,287.8281" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="34" x="32.5" y="274.998">nak(i)</text><polygon fill="#F1F1F1" points="20,322.8281,79,322.8281,89,339.8125,79,356.7969,20,356.7969" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="39" x="30" y="343.9668">ack(o)</text><polygon fill="#F1F1F1" points="126.5,192.9063,190.5,192.9063,180.5,209.8906,190.5,226.875,126.5,226.875" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="34" x="136.5" y="214.0449">ack(i)</text><rect fill="#F1F1F1" height="47.9375" style="stroke:#181818;stroke-width:0.5;" width="109" x="99" y="246.875"/><line style="stroke:#181818;stroke-width:0.5;" x1="104" x2="104" y1="246.875" y2="294.8125"/><line style="stroke:#181818;stroke-width:0.5;" x1="203" x2="203" y1="246.875" y2="294.8125"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="44" x="109" y="268.0137">next(o)</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="89" x="109" y="281.9824">on several line</text><rect fill="#F1F1F1" height="33.9688" style="stroke:#181818;stroke-width:0.5;" width="73" x="117" y="329.8125"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="127" y="350.9512">i := i + 1</text><polygon fill="#F1F1F1" points="124,383.7813,183,383.7813,193,400.7656,183,417.75,124,417.75" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="39" x="134" y="404.9199">ack(o)</text><polygon fill="#F1F1F1" points="240,253.8594,301,253.8594,291,270.8438,301,287.8281,240,287.8281" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="250" y="274.998">err(i)</text><polygon fill="#F1F1F1" points="236,322.8281,295,322.8281,305,339.8125,295,356.7969,236,356.7969" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="39" x="246" y="343.9668">nak(o)</text><polygon fill="#F1F1F1" points="325,288.3438,355,288.3438,345,322.3125,315,322.3125" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="20" x="325" y="309.4824">foo</text><path d="M370,259.8438 L365,276.8281 L370,293.8125 M409,259.8438 L414,276.8281 L409,293.8125 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="29" x="375" y="280.9824">i &gt; 5</text><ellipse cx="389.5" cy="339.8125" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:1.0;"/><ellipse cx="389.5" cy="339.8125" fill="#222222" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.5;" x1="49.5" x2="335" y1="437.75" y2="437.75"/><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="51" x="200.5" y="457.75"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="210.5" y="478.8887">finish</text><line style="stroke:#181818;stroke-width:1.0;" x1="226" x2="226" y1="44.9688" y2="64.9688"/><polygon fill="#181818" points="222,54.9688,226,64.9688,230,54.9688,226,58.9688" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="226" x2="226" y1="98.9375" y2="118.9375"/><polygon fill="#181818" points="222,108.9375,226,118.9375,230,108.9375,226,112.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="49.5" x2="49.5" y1="287.8281" y2="322.8281"/><polygon fill="#181818" points="45.5,312.8281,49.5,322.8281,53.5,312.8281,49.5,316.8281" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="153.5" x2="153.5" y1="226.875" y2="246.875"/><polygon fill="#181818" points="149.5,236.875,153.5,246.875,157.5,236.875,153.5,240.875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="153.5" x2="153.5" y1="294.8125" y2="329.8125"/><polygon fill="#181818" points="149.5,319.8125,153.5,329.8125,157.5,319.8125,153.5,323.8125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="153.5" x2="153.5" y1="363.7813" y2="383.7813"/><polygon fill="#181818" points="149.5,373.7813,153.5,383.7813,157.5,373.7813,153.5,377.7813" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="265.5" x2="265.5" y1="287.8281" y2="322.8281"/><polygon fill="#181818" points="261.5,312.8281,265.5,322.8281,269.5,312.8281,265.5,316.8281" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="389.5" x2="389.5" y1="293.8125" y2="328.8125"/><polygon fill="#181818" points="385.5,318.8125,389.5,328.8125,393.5,318.8125,389.5,322.8125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="49.5" x2="49.5" y1="174.4063" y2="253.8594"/><polygon fill="#181818" points="45.5,243.8594,49.5,253.8594,53.5,243.8594,49.5,247.8594" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="153.5" x2="153.5" y1="174.4063" y2="192.9063"/><polygon fill="#181818" points="149.5,182.9063,153.5,192.9063,157.5,182.9063,153.5,186.9063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="265.5" x2="265.5" y1="174.4063" y2="253.8594"/><polygon fill="#181818" points="261.5,243.8594,265.5,253.8594,269.5,243.8594,265.5,247.8594" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="335" x2="335" y1="174.4063" y2="288.3438"/><polygon fill="#181818" points="331,278.3438,335,288.3438,339,278.3438,335,282.3438" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="389.5" x2="389.5" y1="174.4063" y2="259.8438"/><polygon fill="#181818" points="385.5,249.8438,389.5,259.8438,393.5,249.8438,389.5,253.8438" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="49.5" x2="49.5" y1="356.7969" y2="437.75"/><polygon fill="#181818" points="45.5,427.75,49.5,437.75,53.5,427.75,49.5,431.75" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="153.5" x2="153.5" y1="417.75" y2="437.75"/><polygon fill="#181818" points="149.5,427.75,153.5,437.75,157.5,427.75,153.5,431.75" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="265.5" x2="265.5" y1="356.7969" y2="437.75"/><polygon fill="#181818" points="261.5,427.75,265.5,437.75,269.5,427.75,265.5,431.75" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="335" x2="335" y1="322.3125" y2="437.75"/><polygon fill="#181818" points="331,427.75,335,437.75,339,427.75,335,431.75" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="226" x2="226" y1="152.9063" y2="172.9063"/><polygon fill="#181818" points="222,162.9063,226,172.9063,230,162.9063,226,166.9063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="226" x2="226" y1="439.25" y2="457.75"/><polygon fill="#181818" points="222,447.75,226,457.75,230,447.75,226,451.75" style="stroke:#181818;stroke-width:1.0;"/><!--MD5=[c7ca7757d60f456cdc47a35d8e1bfa95]
+@startuml
+:Ready;
+:next(o)|
+:Receiving;
+split
+ :nak(i)<
+ :ack(o)>
+split again
+ :ack(i)<
+ :next(o)
+ on several line|
+ :i := i + 1]
+ :ack(o)>
+split again
+ :err(i)<
+ :nak(o)>
+split again
+ :foo/
+split again
+ :i > 5}
+stop
+end split
+:finish;
+@enduml
+
+PlantUML version 1.2022.13beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
+]]></content>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>my first post</title>
+    <url>/2022/09/18/my-first-post/</url>
+    <content><![CDATA[<h2 id="first-blog"><a href="#first-blog" class="headerlink" title="first blog"></a>first blog</h2><p>this is test for first post. 2022年9月18日16:46:41</p>
+]]></content>
+      <categories>
+        <category>Peace&amp;Love 生活用心感受</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>python中的__name__</title>
+    <url>/2022/02/27/python_name/</url>
+    <content><![CDATA[<p><code>__name__</code> 是python中的内置属性，每一个python文件都有一个 <code>__name__</code> 属性。对于同一文件，这一属性在不同使用情况下有不同的值</p>
+<h2 id="在顶级代码环境中"><a href="#在顶级代码环境中" class="headerlink" title="在顶级代码环境中"></a>在顶级代码环境中</h2><p>“顶级代码”是第一个开始运行的用户指定的 Python 模块&#x2F;文件。它是“顶级的”，因为它导入了程序需要的所有其他模块。有时“顶级代码”被称为应用程序的入口点。<br>顶级模块 <code>__name__</code> 都设置为 <code>'__main__'</code> .<br>因此，模块可以通过检查自己的 来发现它是否在顶级环境中运行<code>__name__</code> ，这允许在模块未从导入语句初始化时有条件地执行代码的通用习惯用法：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="comment"># 当模块没有被任何import语句初始化而执行时</span></span><br><span class="line">    <span class="comment"># Execute when the module is not initialized from an import statement.</span></span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+
+<h2 id="作为模块被引用时"><a href="#作为模块被引用时" class="headerlink" title="作为模块被引用时"></a>作为模块被引用时</h2><p>py文件作为模块被引用时，其 <code>__name__</code> 的值表现为python文件名本身(不含’.py’), 例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">myclass</span><br><span class="line">  ├── teacher.py</span><br><span class="line">  └── myclass_test.py</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># myclass/myclass_test.py</span></span><br><span class="line"><span class="keyword">import</span> teacher</span><br><span class="line"><span class="built_in">print</span>(teacher.__name__)</span><br><span class="line"><span class="comment"># tearcher</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="包中的-name"><a href="#包中的-name" class="headerlink" title="包中的__name__"></a>包中的__name__</h2><h3 id="在-init-py中"><a href="#在-init-py中" class="headerlink" title="在__init__.py中"></a>在__init__.py中</h3><p>当该包被其他文件引用时, __init__.py文件中的 <code>__name__</code> 变量的值为包名, 例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">myclass</span><br><span class="line">  ├── teacher.py</span><br><span class="line">  └── __init__.py</span><br><span class="line">test.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># myclass/__init__.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">showname</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;myclass包中__init__.py中的__name__:&#x27;</span>, __name__)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># test.py</span></span><br><span class="line"><span class="keyword">import</span> myclass</span><br><span class="line">myclass.showname()</span><br><span class="line"><span class="built_in">print</span>(myclass.__name__)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;test finished.&#x27;</span>)</span><br><span class="line"><span class="comment"># myclass包中__init__.py中的__name__: myclass</span></span><br><span class="line"><span class="comment"># myclass</span></span><br><span class="line"><span class="comment"># test finished.</span></span><br></pre></td></tr></table></figure>
+<h3 id="在-main-py中"><a href="#在-main-py中" class="headerlink" title="在__main__.py中"></a>在__main__.py中</h3><p>当该包被其他文件引用时, __init__.py文件中的 <code>__name__</code> 变量的值为 <code>__main__</code> , 例如:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">myclass</span><br><span class="line">  ├── teacher.py</span><br><span class="line">  ├── __main__.py</span><br><span class="line">  └── __init__.py</span><br><span class="line">test.py</span><br></pre></td></tr></table></figure>
+
+<p>外部python文件如需直接调用包中的__main__.py，必须在__int__.py中加入 <code>from .__main__ import *</code> ，注意如果不添加将无法直接引用包中的__main__属性, 需通过 <code>python -m myclass</code> 来执行</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># myclass/__init__.py</span></span><br><span class="line"><span class="keyword">from</span> .__main__ <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">showname</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;myclass包中__init__.py中的__name__:&#x27;</span>, __name__)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># myclass/__main__.py</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">showname</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;myclass包中__main__.py中的__name__:&#x27;</span>, __name__)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># test.py</span></span><br><span class="line"><span class="keyword">import</span> myclass</span><br><span class="line"></span><br><span class="line"><span class="comment"># __init__.py测试</span></span><br><span class="line">myclass.showname()</span><br><span class="line"><span class="built_in">print</span>(myclass.__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># __main__.py测试</span></span><br><span class="line">myclass.__main__.showmainname()</span><br><span class="line"><span class="built_in">print</span>(myclass.__main__.__name__)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;test finished.&#x27;</span>)</span><br><span class="line"><span class="comment"># myclass包中__init__.py中的__name__: myclass</span></span><br><span class="line"><span class="comment"># myclass</span></span><br><span class="line"><span class="comment"># myclass包中__main__.py中的__name__: myclass.__main__</span></span><br><span class="line"><span class="comment"># myclass.__main__</span></span><br><span class="line"><span class="comment"># test finished.</span></span><br></pre></td></tr></table></figure>
+
+<p>去掉 <code>from .__main__ import *</code> ,使用-m标志将直接从命令行调用包本身执行__main__.py</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python3 -m myclass</span><br><span class="line">myclass包中__main__.py中的__name__:__main__</span><br></pre></td></tr></table></figure>
+<p>注意如果不去掉__init__.py文件中的 <code>from .__main__ import *</code> ，将会出现警告</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RuntimeWarning: &#x27;myclass.__main__&#x27; found in </span><br><span class="line">sys.modules after import of package &#x27;myclass&#x27;, but prior to execution of &#x27;myclass.__main__&#x27;; this may result in unpredictable behaviour</span><br><span class="line">  warn(RuntimeWarning(msg))</span><br><span class="line">myclass包中__main__.py中的__name__: __main__</span><br></pre></td></tr></table></figure>
+
+<h3 id="在包中的其他py文件中"><a href="#在包中的其他py文件中" class="headerlink" title="在包中的其他py文件中"></a>在包中的其他py文件中</h3><p>此时 <code>__name__</code> 变量的值为<b>包名.文件名</b>(不包含’.py’),<br>在__name__.py文件中引入teacher模块</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># myclass/__init__.py</span></span><br><span class="line"><span class="keyword">from</span> .__main__ <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> . <span class="keyword">import</span> teacher</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">showname</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;myclass包中__init__.py中的__name__:&#x27;</span>, __name__)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># myclass/teacher.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">showteachername</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;myclass包中teacher.py中的__name__:&#x27;</span>, __name__)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>对在上一小节的test.py稍作修改</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># test.py</span></span><br><span class="line"><span class="keyword">import</span> myclass</span><br><span class="line"></span><br><span class="line"><span class="comment"># __init__.py测试</span></span><br><span class="line">myclass.showname()</span><br><span class="line"><span class="built_in">print</span>(myclass.__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># __main__.py测试</span></span><br><span class="line">myclass.__main__.showmainname()</span><br><span class="line"><span class="built_in">print</span>(myclass.__main__.__name__)</span><br><span class="line"></span><br><span class="line"><span class="comment"># teacher.py测试</span></span><br><span class="line">myclass.teacher.showteachername()</span><br><span class="line"><span class="built_in">print</span>(myclass.teacher.__name__)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;test finished.&#x27;</span>)</span><br><span class="line"><span class="comment"># myclass包中__main__.py中的__name__: myclass.__main__</span></span><br><span class="line"><span class="comment"># myclass包中__init__.py中的__name__: myclass</span></span><br><span class="line"><span class="comment"># myclass</span></span><br><span class="line"><span class="comment"># myclass包中__main__.py中的__name__: myclass.__main__</span></span><br><span class="line"><span class="comment"># myclass.__main__</span></span><br><span class="line"><span class="comment"># myclass包中teacher.py中的__name__: myclass.teacher</span></span><br><span class="line"><span class="comment"># myclass.teacher</span></span><br><span class="line"><span class="comment"># test finished.</span></span><br></pre></td></tr></table></figure>
+
+<p>注意结果中出现了2次 <code>myclass包中__main__.py中的__name__: myclass.<strong>main</strong></code> ，是因为在导入myclass包时，执行了<code>from .<strong>main</strong> import *</code></p>
+]]></content>
+      <categories>
+        <category>Research&amp;Development 科技改变生活</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Coding</tag>
+        <tag>编程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《离散事件系统仿真》学习笔记 - 1. 初识仿真</title>
+    <url>/2022/10/02/%E4%BB%BF%E7%9C%9F%E5%88%9D%E8%AF%86/</url>
+    <content><![CDATA[<h1 id="1-初识仿真"><a href="#1-初识仿真" class="headerlink" title="1. 初识仿真"></a>1. 初识仿真</h1><h2 id="1-1-何时适用仿真"><a href="#1-1-何时适用仿真" class="headerlink" title="1.1 何时适用仿真"></a>1.1 何时适用仿真</h2><p>普遍认为仿真可用于如下目标：</p>
+<ol>
+<li>研究复杂系统或其子系统之间的内部互动关系</li>
+<li>对影响系统的信息变化、组织变化和环境变化进行模拟，进而观测这些变化对模型行为的影响</li>
+<li>仿真模型过程中所获得的相关知识，对于研究系统的改进具有重要价值</li>
+<li>通过调整仿真输入，就可以观测对应输出的变化，有助于了解哪些输入是关键变量，以及变量之间是如何影响的</li>
+<li>作为分析工具、教学工具来弥补解析法的不足</li>
+<li>在新方案、新策略实施前，对其进行实验，以便对可能发生的情况作出预判</li>
+<li>可用于验证解析解</li>
+<li>可通过模拟设备的不同能力，确定设备可需数量</li>
+<li>以训练为目的设计的仿真模型使得离线学习成为可能，这既不会对正常运行的系统造成影响，也不会因此而增加成本。</li>
+<li>仿真动画可以展示系统的运行过程，从而使得方案可视化</li>
+<li>现代系统（工厂、晶圆制造厂、服务组织，等等）内部过于复杂，以至于其内部交互过程只能通过仿真进行研究</li>
+</ol>
+<h2 id="1-2-何时不适用仿真"><a href="#1-2-何时不适用仿真" class="headerlink" title="1.2 何时不适用仿真"></a>1.2 何时不适用仿真</h2><ol>
+<li>当能够借助常识解决系统问题时，就不应该使用仿真</li>
+<li>如果能够使用解析法求解，就没必要使用仿真</li>
+<li>如果仿真成本高于直接实验的成本，就不要使用仿真</li>
+<li>如果仿真成本超过所节省的费用，则不要使用仿真<ul>
+<li>完整的仿真过程有很多步骤必须完全执行，可能带来较高成本</li>
+</ul>
+</li>
+<li>如果资源不充裕，不要使用仿真</li>
+<li>如果时间不充裕，不要使用仿真</li>
+<li>仿真过程需要使用数据，有时是大量数据，如果没有数据可用不要使用仿真<ul>
+<li>至少应有较为合理的估计数据</li>
+</ul>
+</li>
+<li>该法则关心模型校核(verify)和验证(validate)能力的问题。如果可用校核和验证的时间或人力不足，则不宜采用仿真</li>
+<li>如果管理者有不切实际的期望，不建议采用仿真<ul>
+<li>比如他们要求太多，但预留的时间很少</li>
+</ul>
+</li>
+<li>如果系统过于复杂或者无法定义，则不建议使用仿真，人的行为有时对于建模而言过于复杂</li>
+</ol>
+<h2 id="1-3-仿真的优势与劣势"><a href="#1-3-仿真的优势与劣势" class="headerlink" title="1.3 仿真的优势与劣势"></a>1.3 仿真的优势与劣势</h2><p>直观上，仿真能够迎合用户，因为它模仿实际系统可能出现的情况，或者帮助认知一个尚在设计阶段的系统。仿真输出数据是对实际系统输出的直接写照。此外，不依赖于牵强的假设而建立一个系统的仿真模型是可能的。</p>
+<p>相对于优化模型，仿真模型更侧重于 <strong>“运行(run)”</strong> 而非 <strong>“求解(solve)”</strong>。给定某个输入集和模型特征参数之后，仿真模型就可以运行，所以模型的系统行为会被观测到。改变输入参变量或模型特征参数会生成一系列的 **场景(scenario)**，这些场景就是我们要评估的方案。一个好的解决方案，无论是基于现有系统或新设计系统，将被推荐实施。</p>
+<p>仿真的优势：</p>
+<ol>
+<li>可以在不影响现有系统正常运行的情况下研究和分析新策略、处理过程、决策规则、信息流、组织流程等。</li>
+<li>可以在不消耗资源的情况下测试新硬件设计方案、物理布局、交通系统等带来的收益。</li>
+<li>针对某种现象发生可能的成因或机理，可检验其可行性。</li>
+<li>仿真环境下，时间可以被压缩或延长，以实现所研究现象的的加速或减速。</li>
+<li>借助仿真可以内窥系统变量之间的相互作用。</li>
+<li>借助仿真可以内窥影响系统性能的诸多变量的重要性。</li>
+<li>基于仿真的瓶颈分析，可揭示哪些过程或环节会造成生产流程、信息、物料等要素的过度延迟。</li>
+<li>可以回答what-if的问题，这对于新系统设计而言尤为有用。</li>
+</ol>
+<p>仿真的劣势：</p>
+<ol>
+<li>建模需特殊训练。建模具有艺术性、专业性，需要时间和经验的积累。如果两个模型由不同人完成，可能具有某些相似性，但却可能由本质上的差别。</li>
+<li>仿真结果难以预测，是否准确反应系统本质也可能存在Gap。<ul>
+<li>大多数仿真输出实质上是一些随机的变量（仿真输出基于随机性输入），因此难以辨认哪些系统输出值是系统本质的真实体现，哪些是随机性造成的</li>
+</ul>
+</li>
+<li>仿真模型和分析工作需耗费时间和金钱。如果消减建模和分析所需的资源，会导致工作效果不充分。</li>
+<li>某些问题可通过仿真求解，但是可能更适合使用解析法求解。</li>
+</ol>
+<p>如果为仿真辩解的话，上述四点不足也有其应对策略：</p>
+<ol>
+<li>仿真软件是开发商提供的高效开发工具包，其中包含一些模型，只需要输入数据即可使用。此类模型被称为 <strong>模拟器（simulator）</strong> 或 <strong>模板（template）</strong>。</li>
+<li>许多仿真软件开发商在软件包中集成了输出分析的能力，可对相关系统进行全面分析。</li>
+<li>目前的仿真执行速度很快，未来会更快，这源于硬件能力的提升，也源于仿真软件的不断发展。</li>
+<li>闭式模型无法用于分析我们在实践中遇到的大多数复杂系统。许多长期从事咨询业务的专家表示几乎没有的可以使用闭式方法求解的问题。</li>
+</ol>
+<h2 id="1-4-应用领域"><a href="#1-4-应用领域" class="headerlink" title="1.4 应用领域"></a>1.4 应用领域</h2><p>按领域分类如下：</p>
+<ul>
+<li>生产制造</li>
+<li>晶圆制造</li>
+<li>业务流程管理</li>
+<li>建设工程和项目管理</li>
+<li>物流、运输和分销</li>
+<li>军事</li>
+<li>医疗保健</li>
+<li>其他</li>
+</ul>
+<h2 id="1-5-近年来的应用"><a href="#1-5-近年来的应用" class="headerlink" title="1.5 近年来的应用"></a>1.5 近年来的应用</h2><ul>
+<li>题目：土耳其军队利用仿真方法对油料供应系统进行建模和优化，《Interfaces》杂志，2015.11</li>
+<li>题目：PLATO系统助力雅典夺冠：用于组织转换和资源管理的奥运竞技知识模型，《Interfaces》杂志，2016.1</li>
+<li>题目：Schlumberger利用仿真方法进行国土地震调查项目投标和项目执行，《Interfaces》杂志，2007.3</li>
+<li>题目：利用运筹学方法帮助SRC公司重塑运营战略，《Interfaces》杂志，2007.11</li>
+<li>题目：应用仿真手段解决基于需求导向的服务业人力排班问题，2007冬季仿真大会论文集</li>
+<li>题目：在家电制造企业应用仿真手段提升生产线末端产品分拣和物料搬运及理货计划，2007冬季仿真大会论文集</li>
+</ul>
+<h2 id="1-6-系统与系统环境"><a href="#1-6-系统与系统环境" class="headerlink" title="1.6 系统与系统环境"></a>1.6 系统与系统环境</h2><p>实施系统建模之前，需要对系统以及系统边界有所了解。<strong>所谓系统，是指为了实现某种目标而组合在一起的对象的集合，这些对象之间依照规则彼此交互、相互依存。</strong></p>
+<p>系统常常被系统外部环境发生的变化所影响，我们说这些变化发生在系统外部环境之中。<strong>在开展系统建模的时候，需要确定系统与其外部环境之间的边界。边界的划分取决于所研究问题的目标（问题目标不同，边界也可能不同）。</strong></p>
+<h2 id="1-7-系统要素"><a href="#1-7-系统要素" class="headerlink" title="1.7 系统要素"></a>1.7 系统要素</h2><p>为理解和分析系统，我们需要定义一些术语。</p>
+<ul>
+<li>**实体(entity)**：是存在于系统中的、所研究的对象。</li>
+<li>**属性(attribute)**：是实体的特征。</li>
+<li>**活动(activity)**：是指具有一定长度的时间段</li>
+</ul>
+<p>以银行系统为例，顾客是实体，顾客账户余额是属性，存款是活动。</p>
+<ul>
+<li>**状态(state)**：是描述系统中与研究目标相关的所有变量的集合。</li>
+<li>**事件(event)**：是引起系统状态变化的 **瞬间发生的事情(instantaneous occurrence)**。</li>
+<li>**内生(endogenous)**：是指在系统内部发生的活动和事件。</li>
+<li>**外生(exogenous)**：是指发生在外部环境中、对心态造成影响的活动和事件。</li>
+</ul>
+<p>在银行案例中，顾客达到是一个外生事件，顾客完成服务是一个内生事件。</p>
+<p>举例说明：</p>
+<table>
+<thead>
+<tr>
+<th>系统</th>
+<th>实体</th>
+<th>属性</th>
+<th>活动</th>
+<th>事件</th>
+<th>状态变量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>银行</td>
+<td>顾客</td>
+<td>支票账户余额</td>
+<td>存款</td>
+<td>到达；离开</td>
+<td>繁忙柜员数量；等待顾客数量</td>
+</tr>
+<tr>
+<td>快速铁路</td>
+<td>乘客</td>
+<td>起点；终点</td>
+<td>旅行</td>
+<td>抵达起始车站；到达目的地</td>
+<td>在各个车站等候的乘客数量；行驶列车中的乘客数量</td>
+</tr>
+<tr>
+<td>生产车间</td>
+<td>机器设备</td>
+<td>速度；能力；故障率</td>
+<td>焊接；冲压</td>
+<td>故障</td>
+<td>机器状态（繁忙、空闲、宕机）</td>
+</tr>
+<tr>
+<td>通信系统</td>
+<td>信息</td>
+<td>长度；目的地址</td>
+<td>传输</td>
+<td>到达目的地址</td>
+<td>待传输信息数量</td>
+</tr>
+<tr>
+<td>库存</td>
+<td>仓库</td>
+<td>仓储能力</td>
+<td>物料回收</td>
+<td>物料需求</td>
+<td>库存水平；积压的需求</td>
+</tr>
+</tbody></table>
+<h2 id="1-8-离散系统与连续系统"><a href="#1-8-离散系统与连续系统" class="headerlink" title="1.8 离散系统与连续系统"></a>1.8 离散系统与连续系统</h2><p>系统分为离散型和连续型两大类。现实系统很少能单纯的归类为离散系统或连续系统，但对于大多数系统而言，总有一种类型居于支配地位，所以将其划分为离散系统或者连续系统还是有可能的。</p>
+<p>**离散系统(discrete system)**：是指系统状态变量仅在时间轴的离散点集上发生改变。</p>
+<p>**连续系统(continuous system)**：是指其状态变量随时间变化而连续变化的系统。</p>
+<h2 id="1-9-系统模型"><a href="#1-9-系统模型" class="headerlink" title="1.9 系统模型"></a>1.9 系统模型</h2><p>我们有时希望研究一个系统，以了解其内部要素之间的关系，或者预测新方案对系统运作的影响。某些情况下可以借助系统本身进行实验。然而，这种方法并不总是可行，因为新系统可能并不存在，仅停留在概念、模式或设计阶段，即使系统存在，也可能无法使用其进行实验。在银行案例中，如果减少柜员数量，以研究顾客队列长度的变化情况，很可能会造成顾客的不满，从而将其银行账户转至该银行的竞争者处。因此，系统研究多借助系统模型来完成。</p>
+<p><strong>模型</strong> 是指为进行系统研究而定义的 <strong>“系统表示(representation of a system)”</strong>。对大多数研究而言，<strong>只需要考虑那些会影响所研究问题的系统因素，这些因素需要在系统模型中得到展现。</strong></p>
+<p>按照定义，<strong>模型是对实际系统的简化，另一方面，模型在某些地方又要足够详细，以保证获得与真实情况一致的有效结论。针对同一个系统，如果研究目标不同，则需要建立不同的模型。</strong></p>
+<p>正如系统要素包括实体、属性以及活动，模型中也要体现这些内容。然而，模型只需要包括那些与研究目标相关的要素即可。</p>
+<h2 id="1-10-模型的种类"><a href="#1-10-模型的种类" class="headerlink" title="1.10 模型的种类"></a>1.10 模型的种类</h2><p>模型分为数学模型和物理模型。数学模型运用系统符号和数学公式来表征。系统仿真模型是一类特殊的数学模型，物理模型是研究对象的放大或缩小版本，如原子的放大模型或太阳系的微缩模型。</p>
+<p>仿真模型可以进一步划分为**静态型(static)、动态型(dynamic)、确定型(deterministic)、随机型(stochastic)，离散型(discrete)与连续型(continuous)**。</p>
+<p>**静态仿真模型也称为蒙特卡洛仿真(Monte Carlo Simulation)**。表真的是处于某个指定时刻的系统，系统特性不随时间变化而改变，动态仿真模型则表真特性，随时间而改变的系统。从上午九点到下午四点的银行系统仿真就是一个动态仿真过程。</p>
+<p>不包含随机变量的仿真模型是确定型的。在确定型模型中，若模型输入一定，则输出是确定且唯一的。如果所有病人都按照预定时间到达，那么牙科诊所中的病人到达就是确定型的。 <strong>随机型仿真模型的输入中包含一个以上的随机型变量，随机输入会导致输出的随机性。由于仿真输出的随机性，因此，它被认为是对仿真模型真实属性的一次估计。</strong> 银行系统仿真案例，通常包含随机的顾客到达时间间隔和随机的服务时间，那么在随机性仿真中，仿真输出度量指标，如排队等待顾客的平均数，每位顾客的平均等待时间被看作系统真实特征的统计估计。</p>
+<p>离散模型和连续模型也可以用类似的方式进行定义。然而，离散仿真模型并不总是用于离散系统建模。同样的，连续仿真模型也并不总是用于连续系统建模。罐体和管道可以用于离散方式建模，虽然我们都知道液体流动是连续的，此外仿真模型也可以是混合的，也就是离散型和连续型的混合使用。选择离散型还是连续型仿真模型取决于所研究系统的特征以及研究对象。如果考察的数据包的特性。如果考察数据包的特性以及传递过程，那么通信信道就可以采用离散方式建模。相反，如果考察信道中数据流的整体性，那么采用连续方式建模更合适。<strong>我们重点讨论动态型、随机型和离散型仿真模型。</strong></p>
+<h2 id="1-11-离散事件系统仿真"><a href="#1-11-离散事件系统仿真" class="headerlink" title="1.11 离散事件系统仿真"></a>1.11 离散事件系统仿真</h2><p>本书是一本关于离散事件系统仿真(discrete-event system simulation)的教材的读书笔记。离散事件系统仿真是对这样的系统进行建模：系统状态变量仅在离散的时间点发生改变，仿真模型使用数值方法，而非解析方法进行分析和求解。解析方法采用数学演绎推导法对模型求解。例如，微积分可用于计算库存模型中的最小成本策略。<strong>数值方法采用数字计算方法(computational procedures)求解数学模型。采用数值方法的仿真模型，其结果是运行出来的，而非解析出来的。</strong> 也就是说，通过模型假设人工在线系统的过去，然后搜索观测值，用于分析和评价系统的真实性能。针对实际问题所构建的仿真模型规模较大，需要存储和管理的数据也十分巨大，因此仿真过程需要借助计算机来完成。总体来说，本书介绍的是离散离散事件，系统仿真需要采用数值方法进行建模和分析，需要借助计算机加以实现。</p>
+<h2 id="1-12-仿真研究的步骤"><a href="#1-12-仿真研究的步骤" class="headerlink" title="1.12 仿真研究的步骤"></a>1.12 仿真研究的步骤</h2><p>仿真研究的步骤如下：</p>
+<ol>
+<li>问题构想<ul>
+<li>研究工作应从问题描述开始。如果由决策者或者问题提出者进行问题描述，分析人员应确保对该问题有清晰的理解。如果由分析人员进行问题描述，一定要经决策者理解并认可。</li>
+<li>在研究过程中，偶尔需要对问题描述进行完善和修订。在很多案例中，决策者和分析人员会意识到某个问题的存在，但是需要经过很长时间才能对该问题有实质上的理解。</li>
+</ul>
+</li>
+<li>设定目标和整体项目规划<ul>
+<li>目标指明了需要通过仿真回答的疑问</li>
+<li>首先要确认仿真手段是否就是解决该问题及相应目标的最合适的方法</li>
+<li>若适用，整体项目计划中还应该包含多个系统备选方案的说明，以及对备选方案的性能评价方法</li>
+<li>研究计划还应包括所需人员、成本、各阶段工作天数，以及各阶段结束时的预期效果</li>
+</ul>
+</li>
+<li>模型的概念化<ul>
+<li>系统建模兼具科学性与艺术性</li>
+<li>虽然不可能提出一套保证每个仿真建模项目都能成功的操作指南，但仍有一些通用性准则可以遵循</li>
+<li>善于提炼出问题本质的能力有助于提升建模技巧，选择或调整那些揭示系统特征的基本假设，可以使模型得到增强和细化，最终得到有用的近似解。</li>
+<li>最好从建立简单模型起步，逐步加深模型的复杂度。</li>
+<li>模型复杂度不宜超过模型预期目标的要求，违反该原则只会增加建模成本和运算成本。</li>
+<li>模型和实际系统不必一一对应，只需包含实际系统的主要特征即可。</li>
+<li>我们建议在模型概念化、设计工作中，让模型的最终用户参与其中。用户参与一方面可以增强最终模型的质量，也可以增加用户对模型应用的信心。</li>
+</ul>
+</li>
+<li>数据搜集<ul>
+<li>模型构建与输入数据搜集之间存在持续不断的相互作用和影响的关系。</li>
+<li>随着模型越来越复杂，所需要的输入数据也会随之改变。</li>
+<li>在整个仿真研究过程中，数据搜集会占用大量时间，因而需要尽早启动。</li>
+<li>一般在模型构建的初期，就应该开始很大程度上研究目标，决定所需搜集数据的内容。</li>
+</ul>
+</li>
+<li>模型转译<ul>
+<li>大多数现实系统所构建的模型需要庞大的信息存储和计算能力，因此模型需要以计算机可识别的格式进行研制。</li>
+<li>大多数情况下，我们使用术语程序表示计算机编码的模型，即使建模过程中很少或者完全不用编写程序代码的时候也使用该术语。</li>
+<li>建模人员需要决定是使用仿真语言还是专用仿真软件。</li>
+</ul>
+</li>
+<li>校核<ul>
+<li>用于计算机编程的代码校核（程序代码调试）同样适用于仿真建模，软件是否能正确运行，对于复杂系统而言，虽然具有一定的可能性，但是不进行大量调试而实现成功建模是很困难的。</li>
+<li>如果模型的输入参数和逻辑结构都能由计算机程序完美体现，那么校核工作就完成了。</li>
+<li>大多数情况下，人们对于完成此步骤的标准是有共识的。</li>
+</ul>
+</li>
+<li>验证<ul>
+<li>验证常常通过模型校准(collaboration)完成，既通过迭代对比模型与现实系统之间的行为差异，不断获得更深入的理解，从而实现模型的改进。</li>
+<li>这是一个重复的过程，直至模型精度达到可接受的程度为止。</li>
+</ul>
+</li>
+<li>实验设计<ul>
+<li>对于具有多个备选方案的系统，需要确定对哪些方案进行仿真</li>
+<li>通常需要依据已经完成的仿真运算和分析结果来确定最终的方案。</li>
+<li>对于待仿真的每一个系统方案决定是否对其进行仿真时，都需要考虑初始化阶段的时间长度、仿真运行时长以及每个方案的重复仿真次数(number of replication)。</li>
+</ul>
+</li>
+<li>正式运行与分析<ul>
+<li>仿真模型的正式运行及后续分析用于估计系统方案的性能。</li>
+</ul>
+</li>
+<li>是否需要进一步运行<ul>
+<li>即使运行分析已经完成，分析人员还需要决定是否进行更多次仿真，以及哪一个方案需要更多的实验</li>
+</ul>
+</li>
+<li>编写文档和报告<ul>
+<li>需要编写两类文档，程序文档和过程报告。</li>
+<li><strong>程序文档</strong>：有多种用途<ol>
+<li>如果程序会被开发他的分析人员或者其他分析人员重复使用，他们需要了解程序是如何运行的，这样可以增强大家对模型的信任度。最终用户和决策者才能以分析结果为依据进行决策。</li>
+<li>此外，如果程序被修改，拥有拥有详细的记录，也是有百利而无一害的，由于缺少文本记录而造成的不便，更容易让分析人员意识到文档维护的重要性。</li>
+<li>文档编写的另一个原因是，最终用户可以根据意愿调整参数，以了解输入参数和输出性能之间的关系，或者寻找能够实现输出优化的那些参数。</li>
+</ol>
+</li>
+<li><strong>过程报告</strong>：对于记录仿真项目历史过程的重要性<ol>
+<li>项目报告记录了工作和决策的时间列表，这对于保证项目正确进行很有价值。</li>
+<li>建议经常性的报告至少每个月一次，以便那些非日常工作也能被记录在案。</li>
+<li>通过及早消除误解，项目成功的概率就会得到提高，各种问题也更容易解决。</li>
+<li>建议通过维护项目日志，从而提供全面的记录，这些记录包括<strong>项目完成情况变更请求、关键性决策以及其他重要事项</strong>。</li>
+<li>站在报告者的角度，建议经常性的发布此类报告，不一定非得有重要成果才发布通报。</li>
+<li>相对于一个竣工时间点，在项目工期中设置多个里程碑会有更多好处。</li>
+<li>在完在完成最终报告之前，可能的话还可以提供<strong>模型规范说明、原型演示动画、培训效果、事中分析、程序文档、过程报告以及演示文件</strong>。建议这些可交付物，应在项目生命周期内按时完成。</li>
+</ol>
+</li>
+<li>所有分析结果都应在最终报告中给予清晰反应和准确体现，这样可以<strong>让最终用户(而非决策者)检查模型的最终形式、待议的系统方案、方案比较的指标、仿真实验的结果以及对所研究问题的推荐方案</strong>。进一步的，如果决策来自更高层级的管理者，最终报告<strong>还需要由最终用户和决策者进行一轮鉴定，以确保模型和建模过程的可信度</strong>。</li>
+</ul>
+</li>
+<li>部署<ul>
+<li>部署工作成功与否取决于前面所有11个步骤的执行效果，也和系统分析人员是否让最终用户全程参与息息相关。</li>
+<li>如果最终用户全程参与了仿真模型的建设过程，对模型及其输出完全了解，那么成功部署的可能性就会大大提升。反之，<strong>如果参与者未就模型及其潜在的假设进行充分沟通，无论仿真模型做的多么好，实施过程也会遇到问题</strong>。</li>
+</ul>
+</li>
+</ol>
+<p>如下图所示的仿真建模过程可以划分为四个阶段</p>
+<ul>
+<li>第一阶段：包含第一步 <strong>（问题构想）</strong> 和第二步 <strong>（设定目标和整体项目规划）</strong> 是 <strong>问题发现和定位阶段</strong>。<strong>问题的最初表述往往非常模糊，最初的目标通常会被重新设定，最初的项目计划往往会进行调整。此类重复校准和再度厘清的情况，有可能在本阶段或后续阶段发生</strong>。例如，分析人员可能重复第一阶段的工作。</li>
+<li>第二阶段：涉及<strong>建模和数据采集</strong>，包括第三步 <strong>（模型的概念化）</strong>，第四步 <strong>（数据搜集）</strong>，第五步 <strong>（模型转译）</strong>，第六步 <strong>（校核）</strong> 以及第七步 <strong>（验证）</strong>。这些步骤之间相互影响、相互作用，将最终用户排除在本阶段工作之外，将为成果部署埋下失败的伏笔。</li>
+<li>第三阶段：与模型运行有关，包括第八步 <strong>（实验设计）</strong>、第九步 <strong>（正式运行与分析）</strong>和第十步 <strong>（是否需要进一步运行）</strong>。<strong>该阶段必须针对仿真模型的实验设计制定全面可信的实施方案</strong>。实质上，<strong>离散事件随机仿真就是一类统计实验</strong>，由于输出变量包含随机误差，因此，<strong>需要借助合适的统计分析方法，对其进行估计</strong>。与此相反，如果只依靠一次仿真运行的结果就对系统性能做出推断，往往会得出错误的结<strong>论</strong>，这显然是不对的。</li>
+<li>第四阶段：也就是部署阶段，包括第11步 <strong>（编写文档和报告）</strong> 和第12步 <strong>（部署）</strong>。成功的部署有赖于最终用户的持续参与，以及前面各阶段工作的顺利完成。<strong>在整个过程中，第七步验证或许是最关键的，因为无效的模型肯定导致错误的结论，一旦实施就会带来危险，并且浪费投资。</strong></li>
+</ul>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="805px" preserveAspectRatio="none" style="width:269px;height:805px;background:#FFFFFF;" version="1.1" viewBox="0 0 269 805" width="269px" zoomAndPan="magnify"><defs/><g><ellipse cx="121" cy="20" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1.0;"/><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="82" y="50"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="92" y="71.1387">"问题构思"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="40" y="103.9688"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="142" x="50" y="125.1074">"设定目标和整体项目规划"</text><rect fill="#555555" height="6" rx="2.5" ry="2.5" style="stroke:#555555;stroke-width:1.0;" width="220" x="11" y="201.9375"/><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="90" x="23" y="227.9375"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="70" x="33" y="249.0762">"模型概念化"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="141" y="227.9375"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="151" y="249.0762">"数据搜集"</text><polygon fill="#F1F1F1" points="121,271.9063,133,283.9063,121,295.9063,109,283.9063,121,271.9063" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="82" y="315.9063"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="92" y="337.0449">"模型转译"</text><polygon fill="#F1F1F1" points="91,389.875,151,389.875,163,401.875,151,413.875,91,413.875,79,401.875,91,389.875" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="125" y="424.0854">"是"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="60" x="91" y="405.6831">"校核通过?"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="163" y="399.2808">"否"</text><polygon fill="#F1F1F1" points="121,157.9375,133,169.9375,121,181.9375,109,169.9375,121,157.9375" style="stroke:#181818;stroke-width:0.5;"/><polygon fill="#F1F1F1" points="88.5,445.5854,153.5,445.5854,165.5,457.5854,153.5,469.5854,88.5,469.5854,76.5,457.5854,88.5,445.5854" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="125" y="479.7959">"是"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="88.5" y="461.3936">"验证合格？"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="165.5" y="454.9912">"否"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="64" y="555.2646"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="94" x="74" y="576.4033">"正式运行与分析"</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="78" x="82" y="501.2959"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="92" y="522.4346">"实验设计"</text><polygon fill="#F1F1F1" points="66.5,609.2334,175.5,609.2334,187.5,621.2334,175.5,633.2334,66.5,633.2334,54.5,621.2334,66.5,609.2334" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="125" y="643.4438">"否"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="109" x="66.5" y="625.0415">"是否需要进一步运行"</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="187.5" y="618.6392">"是"</text><path d="M69,664.9438 L64,681.9282 L69,698.9126 M173,664.9438 L178,681.9282 L173,698.9126 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="94" x="74" y="686.0825">"文档编写及报告"</text><polygon fill="#F1F1F1" points="104,718.9126,148,718.9126,138,752.8813,94,752.8813" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="34" x="104" y="740.0513">"部署"</text><ellipse cx="121" cy="783.8813" fill="none" rx="11" ry="11" style="stroke:#222222;stroke-width:1.0;"/><ellipse cx="121" cy="783.8813" fill="#222222" rx="6" ry="6" style="stroke:#111111;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="30" y2="50"/><polygon fill="#181818" points="117,40,121,50,125,40,121,44" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="83.9688" y2="103.9688"/><polygon fill="#181818" points="117,93.9688,121,103.9688,125,93.9688,121,97.9688" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="68" x2="68" y1="207.9375" y2="227.9375"/><polygon fill="#181818" points="64,217.9375,68,227.9375,72,217.9375,68,221.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="180" x2="180" y1="207.9375" y2="227.9375"/><polygon fill="#181818" points="176,217.9375,180,227.9375,184,217.9375,180,221.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="68" x2="68" y1="261.9063" y2="283.9063"/><line style="stroke:#181818;stroke-width:1.0;" x1="68" x2="109" y1="283.9063" y2="283.9063"/><polygon fill="#181818" points="99,279.9063,109,283.9063,99,287.9063,103,283.9063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="180" x2="180" y1="261.9063" y2="283.9063"/><line style="stroke:#181818;stroke-width:1.0;" x1="180" x2="133" y1="283.9063" y2="283.9063"/><polygon fill="#181818" points="143,279.9063,133,283.9063,143,287.9063,139,283.9063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="349.875" y2="389.875"/><polygon fill="#181818" points="117,379.875,121,389.875,125,379.875,121,383.875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="163" x2="175" y1="401.875" y2="401.875"/><polygon fill="#181818" points="171,369.875,175,359.875,179,369.875,175,365.875" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="175" x2="175" y1="332.8906" y2="401.875"/><line style="stroke:#181818;stroke-width:1.0;" x1="175" x2="160" y1="332.8906" y2="332.8906"/><polygon fill="#181818" points="170,328.8906,160,332.8906,170,336.8906,166,332.8906" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="295.9063" y2="315.9063"/><polygon fill="#181818" points="117,305.9063,121,315.9063,125,305.9063,121,309.9063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="181.9375" y2="201.9375"/><polygon fill="#181818" points="117,191.9375,121,201.9375,125,191.9375,121,195.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="165.5" x2="243" y1="457.5854" y2="457.5854"/><polygon fill="#181818" points="239,333.4063,243,323.4063,247,333.4063,243,329.4063" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="243" x2="243" y1="169.9375" y2="457.5854"/><line style="stroke:#181818;stroke-width:1.0;" x1="243" x2="133" y1="169.9375" y2="169.9375"/><polygon fill="#181818" points="143,165.9375,133,169.9375,143,173.9375,139,169.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="413.875" y2="445.5854"/><polygon fill="#181818" points="117,435.5854,121,445.5854,125,435.5854,121,439.5854" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="137.9375" y2="157.9375"/><polygon fill="#181818" points="117,147.9375,121,157.9375,125,147.9375,121,151.9375" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="535.2646" y2="555.2646"/><polygon fill="#181818" points="117,545.2646,121,555.2646,125,545.2646,121,549.2646" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="187.5" x2="199.5" y1="621.2334" y2="621.2334"/><polygon fill="#181818" points="195.5,579.7568,199.5,569.7568,203.5,579.7568,199.5,575.7568" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="199.5" x2="199.5" y1="518.2803" y2="621.2334"/><line style="stroke:#181818;stroke-width:1.0;" x1="199.5" x2="160" y1="518.2803" y2="518.2803"/><polygon fill="#181818" points="170,514.2803,160,518.2803,170,522.2803,166,518.2803" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="589.2334" y2="609.2334"/><polygon fill="#181818" points="117,599.2334,121,609.2334,125,599.2334,121,603.2334" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="469.5854" y2="501.2959"/><polygon fill="#181818" points="117,491.2959,121,501.2959,125,491.2959,121,495.2959" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="633.2334" y2="664.9438"/><polygon fill="#181818" points="117,654.9438,121,664.9438,125,654.9438,121,658.9438" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="698.9126" y2="718.9126"/><polygon fill="#181818" points="117,708.9126,121,718.9126,125,708.9126,121,712.9126" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="121" x2="121" y1="752.8813" y2="772.8813"/><polygon fill="#181818" points="117,762.8813,121,772.8813,125,762.8813,121,766.8813" style="stroke:#181818;stroke-width:1.0;"/><!--MD5=[8c9abc2b59826626e020ec60fd68ba72]
+@startuml
+start
+
+:"问题构思";
+:"设定目标和整体项目规划";
+repeat 
+  fork
+  :"模型概念化";
+  fork again
+  :"数据搜集";
+  end merge
+  repeat:"模型转译";
+  repeat while ("校核通过?") is("否") not ("是")
+repeat while ("验证合格？") is("否") not ("是")
+
+repeat :"实验设计";
+:"正式运行与分析";
+repeat while ("是否需要进一步运行") is ("是") not("否")
+:"文档编写及报告"}
+:"部署"/
+
+stop
+@enduml
+
+PlantUML version 1.2022.13beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
+]]></content>
+      <categories>
+        <category>Research&amp;Development 科技改变生活</category>
+      </categories>
+      <tags>
+        <tag>算法原理</tag>
+        <tag>计算机科学</tag>
+        <tag>仿真技术</tag>
+        <tag>仿真</tag>
+        <tag>概述</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于读论文的方法的实践与总结</title>
+    <url>/2022/10/30/read_paper_method/</url>
+    <content><![CDATA[<h2 id="关于方法论的设计"><a href="#关于方法论的设计" class="headerlink" title="关于方法论的设计"></a>关于方法论的设计</h2><p>是否要做一件事情属于价值判断，不在此探讨。</p>
+<p>当你想长久的做一件事，坚持下来，并从中获益，需要有一套方法论去完成“做”这个行为。</p>
+<p>这套方法论需要结合个人实际情况，结合个人感受，不断体验、理解、消化成自己认可的行事方法，还需要不断更新、反思、总结、改进。</p>
+<p>这套方法论的<strong>目的</strong>是让你做这件事，可以 <strong>“坚持下来，并从中获益”</strong>，因此制定方法、改进方法要围绕这个目的进行分析、总结，不能对标这个目的的方法，不是好的方法。</p>
+<p><strong>“坚持下来”</strong> 意味着你将更愿意倾注时间与精力投入这件事情，反应到量化指标，可以是某种频次或时间度量，例如每天做多少次，每次做了多少时间，每天投入多少时间，每周做了多少，每个月写了多少总结或心得感悟；<strong>“从中获益”</strong> 意味着你要收获点东西，例如知识、快乐、感悟等等，这些收获不应只停留在空想，最好输出成实在的东西，例如写篇总结、心得感悟，做成视频、音频等，当你可以方便随时查阅，经常温故知新，你的收益率将会大幅提升。</p>
+<p>不希望把坚持做一件事的方法写的太繁琐、复杂，如果方法本身就相当繁琐、复杂，可能很难让人有坚持下去的理由，除非是理想信念或者热爱吧。我相信越是简单、好记、好理解的方法越是可行、好操作、好执行并能被广泛认同。</p>
+<p>我暂且把读论文的方法概况为<strong>略读、粗读、精读、审读</strong>。</p>
+<h2 id="略读"><a href="#略读" class="headerlink" title="略读"></a>略读</h2><p>主要关注论文的<strong>标题、关键词、摘要、结论</strong>。</p>
+<p>略读阶段可以跳过论文的主体部分，不关注论文的具体表达，而关注论文的<strong>背景、目的和其描述对象名称或说法</strong>。背景和目的比较好理解，“描述对象名称或说法”稍微做点解释，这里想说的是只需要关注论文的题眼是什么名称，如果整篇论文就用一个词概况的那个词应该是什么词，只需记住他的名称或者名词就好。比如论文说的是以一种A方法去解决B问题，那么“A”就是你在略读后，应该能脱口而出的那个论文所描述的对象名称。</p>
+<p>在略读后，你应该能回答下面的问题：</p>
+<ol>
+<li>这篇论文大概在做一件什么事情。</li>
+<li>这篇论文为啥要做这个事情。</li>
+<li>这篇论文想达成一个什么目的或者想解决一个什么问题、能解决到什么程度。</li>
+</ol>
+<h2 id="粗读"><a href="#粗读" class="headerlink" title="粗读"></a>粗读</h2><p>主要关注论文的<strong>介绍、系统模型、各段落大意</strong>。</p>
+<p>粗读阶段的重点是能大致理出来论文的表达逻辑、系统脉络，并对论文所表述的问题的前因后果有一定的理解。</p>
+<p>在粗读后，你应该能做到如下几点：</p>
+<ol>
+<li>这篇论文的前后关联论文的脉络大概是什么样子的</li>
+<li>了解各段落大意，对主要段落都有个初步影响和理解</li>
+<li>这篇论文所解决问题的系统模型、系统环境大概是个什么样子，论文提出的解决方案的流程是什么样子的，自己可以动手画一画框图、流程图</li>
+</ol>
+<h2 id="精读"><a href="#精读" class="headerlink" title="精读"></a>精读</h2><p>“精读”，字面意思，应做到逐字推敲，逐句理解，逐段小结，可以采取各种形式的方法对论文内容进行消化吸收，例如可以自己动手做做图，写写代码，实地观测，类比观测想象，搜索查询，与他人探讨交流等等方式。但应注意，目的是消化、理解、吸收论文所表达的意涵，精读阶段一切形式的方法都要围绕这个目的展开，不要过度偏离、舍本逐末。</p>
+<p>在精读后，你可以：</p>
+<ol>
+<li>写一写读后心得总结，记录论文管理，编排、梳理进自己的知识库</li>
+<li>对一个没看过这篇文章的人讲一讲这篇论文，力争能用简单的、通俗易懂的方式表达，看看对方是否能理解；你甚至可以做成视频等，也算是对自己小进一步后的小结。</li>
+</ol>
+<h2 id="审读"><a href="#审读" class="headerlink" title="审读"></a>审读</h2><p>“审读”，可能用词不是特别规范，想表达的意思是这一阶段的重点是要带着审视的目光、批判的目光、想深挖创新的目光再读论文。你可以假定这是一篇还未发表的论文，而你正要对它进行评审，你可以假定这个论文作者是你的学生或者正向想你讨教问题、请求你对论文的意见。你尽可以大胆批判，任意畅享，一切思路都可能再创新高。</p>
+<p>在此阶段，你可能：</p>
+<ol>
+<li>提出新的改进</li>
+<li>对这一领域的问题，有独到见解，成为这一领域的专家，有信心给他人相关建议</li>
+</ol>
+<p>这一阶段最漫长，但温故而知新多是这一阶段的故事。</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>本文完全是个人理解，可能会时常根据最新的实践经验更新。本文指导我个人读论文，写在这里，也希望对看到的人有所启发。</p>
+]]></content>
+      <categories>
+        <category>Research&amp;Development 科技改变生活</category>
+      </categories>
+      <tags>
+        <tag>Paper</tag>
+        <tag>论文</tag>
+        <tag>方法论</tag>
+        <tag>实践</tag>
+        <tag>总结</tag>
+        <tag>原创</tag>
+      </tags>
+  </entry>
+</search>
